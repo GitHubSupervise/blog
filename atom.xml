@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://godql.com/"/>
-  <updated>2017-04-06T12:47:15.493Z</updated>
+  <updated>2017-04-06T13:04:03.946Z</updated>
   <id>http://godql.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://godql.com/2017/04/04/Chrome/"/>
     <id>http://godql.com/2017/04/04/Chrome/</id>
     <published>2017-04-04T13:42:27.000Z</published>
-    <updated>2017-04-06T12:47:15.493Z</updated>
+    <updated>2017-04-06T13:04:03.946Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
@@ -85,20 +85,14 @@
 </ul>
 </li>
 <li>6.Network 网络请求标签页：可以看到所有的资源请求，包括网络请求，图片资源，html,css，js文件等请求，可以根据需求筛选请求项，一般多用于网络请求的查看和分析，分析后端接口是否正确传输，获取的数据是否准确，请求头，请求参数的查看<ul>
-<li><img src="/img/Chrome/11.png" alt="按钮"><ul>
+<li><img src="/img/Chrome/11.png" alt="按钮"></li>
 <li>所有的资源</li>
-</ul>
-</li>
 <li>以上我选择了All，就会把该页面所有资源文件请求下来，如果只选择XHR 异步请求资源，则我们可以分析相关的请求信息</li>
-<li><img src="/img/Chrome/12.png" alt="按钮"><ul>
+<li><img src="/img/Chrome/12.png" alt="按钮"></li>
 <li>请求的相关信息</li>
 <li>打开一个Ajax异步请求，可以看到它的请求头信息，是一个POST请求，参数有哪些，还可以预览它的返回的结果数据，这些数据的使用和查看有利于我们很好的和后端工程师们联调数据，也方便我们前端更直观的分析数据</li>
-</ul>
-</li>
-<li><img src="/img/Chrome/13.png" alt="按钮"><ul>
+<li><img src="/img/Chrome/13.png" alt="按钮"></li>
 <li>预览请求的数据</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>7.Timeline标签页可以显示JS执行时间、页面元素渲染时间，不做过多介绍</li>
@@ -185,6 +179,90 @@
       <category term="调试" scheme="http://godql.com/tags/%E8%B0%83%E8%AF%95/"/>
     
       <category term="前端" scheme="http://godql.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TEST</title>
+    <link href="http://godql.com/2017/03/08/Test3/"/>
+    <id>http://godql.com/2017/03/08/Test3/</id>
+    <published>2017-03-08T13:42:27.000Z</published>
+    <updated>2017-04-06T13:35:24.585Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      本文将讲解基于 Chrome浏览器客户端 如何更好的调试！
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TEST</title>
+    <link href="http://godql.com/2017/03/08/Test/"/>
+    <id>http://godql.com/2017/03/08/Test/</id>
+    <published>2017-03-08T13:42:27.000Z</published>
+    <updated>2017-04-06T13:35:24.551Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      本文将讲解基于 Chrome浏览器客户端 如何更好的调试！
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TEST</title>
+    <link href="http://godql.com/2017/03/08/Test2/"/>
+    <id>http://godql.com/2017/03/08/Test2/</id>
+    <published>2017-03-08T13:42:27.000Z</published>
+    <updated>2017-04-06T13:35:24.522Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      本文将讲解基于 Chrome浏览器客户端 如何更好的调试！
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TEST</title>
+    <link href="http://godql.com/2017/03/08/new/"/>
+    <id>http://godql.com/2017/03/08/new/</id>
+    <published>2017-03-08T13:42:27.000Z</published>
+    <updated>2017-04-06T13:33:03.248Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      本文将讲解基于 Chrome浏览器客户端 如何更好的调试！
+    
+    </summary>
+    
     
   </entry>
   
