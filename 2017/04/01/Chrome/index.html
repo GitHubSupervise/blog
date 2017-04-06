@@ -17,7 +17,7 @@
 <meta name="keywords" content="Chrome,客户端,调试,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="非常完整的Chrome浏览器客户端调试大全">
-<meta property="og:url" content="http://godql.com/2017/04/04/Chrome/index.html">
+<meta property="og:url" content="http://godql.com/2017/04/01/Chrome/index.html">
 <meta property="og:site_name" content="Godql Code">
 <meta property="og:description" content="本文将讲解基于 Chrome浏览器客户端 如何更好的调试！">
 <meta property="og:image" content="http://godql.com/img/Chrome/1.png">
@@ -46,7 +46,7 @@
 <meta property="og:image" content="http://godql.com/img/Chrome/24.png">
 <meta property="og:image" content="http://godql.com/img/Chrome/25.png">
 <meta property="og:image" content="http://godql.com/img/Chrome/26.png">
-<meta property="og:updated_time" content="2017-04-06T13:04:03.946Z">
+<meta property="og:updated_time" content="2017-04-06T16:06:49.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="非常完整的Chrome浏览器客户端调试大全">
 <meta name="twitter:description" content="本文将讲解基于 Chrome浏览器客户端 如何更好的调试！">
@@ -197,6 +197,8 @@
                         
                             <li><a href="/archives/">归档</a></li>
                         
+                            <li><a href="/demo/">Demo</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
@@ -219,7 +221,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/客户端/">客户端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/调试/">调试</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/客户端/">客户端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作法/">工作法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/思维导图/">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书/">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/调试/">调试</a></li></ul>
                     </div>
                 </section>
                 
@@ -262,6 +264,8 @@
                 
                     <li><a href="/archives/">归档</a></li>
                 
+                    <li><a href="/demo/">Demo</a></li>
+                
                     <li><a href="/tags/">标签云</a></li>
                 
                     <li><a href="/about/">关于我</a></li>
@@ -287,8 +291,8 @@
       <div class="body-wrap"><article id="post-Chrome" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/04/Chrome/" class="article-date">
-      <time datetime="2017-04-04T13:42:27.000Z" itemprop="datePublished">2017-04-04</time>
+      <a href="/2017/04/01/Chrome/" class="article-date">
+      <time datetime="2017-04-01T13:42:27.000Z" itemprop="datePublished">2017-04-01</time>
 </a>
     </div>
   
@@ -318,6 +322,7 @@
       
           
         <a id="more"></a>
+<p>top: 1000</p>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
 <p>“工欲善其事，必先利其器” </p>
 </blockquote>
@@ -325,12 +330,12 @@
 <li><img src="/img/Chrome/1.png" alt="按钮"></li>
 <li><p>先来看这张图最上头的一行是一个功能菜单，每一个菜单都有它相应的功能和使用方法，依次从左往右来看</p>
 <ul>
-<li>1.箭头按钮：用于在页面选择一个元素来审查和查看它的相关信息，当我们在Elements这个按钮页面下点击某个Dom元素时，箭头按钮会变成选择状态</li>
-<li>2.设备图标：点击它可以切换到不同的终端进行开发模式，移动端和pc端的一个切换，可以选择不同的移动终端设备，同时可以选择不同的尺寸比例，chrome浏览器的模拟移动设备和真实的设备相差不大，是非常好的选择,可选择的适配 <ul>
+<li><code>1.箭头按钮：</code>用于在页面选择一个元素来审查和查看它的相关信息，当我们在Elements这个按钮页面下点击某个Dom元素时，箭头按钮会变成选择状态</li>
+<li><code>2.设备图标：</code>点击它可以切换到不同的终端进行开发模式，移动端和pc端的一个切换，可以选择不同的移动终端设备，同时可以选择不同的尺寸比例，chrome浏览器的模拟移动设备和真实的设备相差不大，是非常好的选择,可选择的适配 <ul>
 <li><img src="/img/Chrome/2.png" alt="按钮"></li>
 </ul>
 </li>
-<li>3.Elements 功能标签页：用来查看，修改页面上的元素，包括DOM标签，以及css样式的查看，修改，还有相关盒模型的图形信息，下图我们可以看到当我鼠标选择id 为lg_tar的div元素时，右侧的css样式对应的会展示出此id 的样式信息，此时可以在右侧进行一个修改，修改即可在页面上生效， 灰色的element.style样式同样可以进行添加和书写，唯一的区别是，在这里添加的样式是添加到了该元素内部，实现方式即：该div元素的style属性，这个页面的功能很强大，在我们做了相关的页面后，修改样式是一块很重要的工作，细微的差距都需要调整，但是不可能说做到每修改一点即编译一遍代码，再刷新浏览器查看效果，这样很低效，一次性在浏览器中修改之后，再到代码中进行修改<ul>
+<li><code>3.Elements 功能标签页：</code>用来查看，修改页面上的元素，包括DOM标签，以及css样式的查看，修改，还有相关盒模型的图形信息，下图我们可以看到当我鼠标选择id 为lg_tar的div元素时，右侧的css样式对应的会展示出此id 的样式信息，此时可以在右侧进行一个修改，修改即可在页面上生效， 灰色的element.style样式同样可以进行添加和书写，唯一的区别是，在这里添加的样式是添加到了该元素内部，实现方式即：该div元素的style属性，这个页面的功能很强大，在我们做了相关的页面后，修改样式是一块很重要的工作，细微的差距都需要调整，但是不可能说做到每修改一点即编译一遍代码，再刷新浏览器查看效果，这样很低效，一次性在浏览器中修改之后，再到代码中进行修改<ul>
 <li><img src="/img/Chrome/3.png" alt="按钮"><ul>
 <li>对应的样式</li>
 </ul>
@@ -342,7 +347,7 @@
 </li>
 </ul>
 </li>
-<li><p>4.Console控制台：用于打印和输出相关的命令信息，其实console控制台除了我们熟知的报错，打印console.log信息外，还有很多相关的功能，下面简单介绍几个：</p>
+<li><p><code>4.Console控制台：</code>用于打印和输出相关的命令信息，其实console控制台除了我们熟知的报错，打印console.log信息外，还有很多相关的功能，下面简单介绍几个：</p>
 <ul>
 <li>a: 一些对页面数据的指令操作，比如打断点正好执行到获取的数据上，由于数据都是层层嵌套的对象，这个时候查看里面的key/value不是很方便，即可用这个指令开查看，obj的json string 格式的key/value，我们对于数据里面有哪些字段和属性即可一目了然<ul>
 <li><img src="/img/Chrome/5.png" alt="按钮"></li>
@@ -356,7 +361,7 @@
 <li>console也有相关的API</li>
 </ul>
 </li>
-<li><p>5.Sources js资源页面：这个页面内我们可以找到当然浏览器页面中的js 源文件，方便我们查看和调试，在我还没有走出校园时候，我经常看一些大站的js代码，那时候其实基本都看不懂，但是最起码可以看看人家的代码风格，人家的命名方式，所有的代码都是压缩之后的代码，我们可以点击下面的{}大括号按钮将代码转成可读格式</p>
+<li><p><code>5.Sources js资源页面：</code>这个页面内我们可以找到当然浏览器页面中的js 源文件，方便我们查看和调试，在我还没有走出校园时候，我经常看一些大站的js代码，那时候其实基本都看不懂，但是最起码可以看看人家的代码风格，人家的命名方式，所有的代码都是压缩之后的代码，我们可以点击下面的{}大括号按钮将代码转成可读格式</p>
 <ul>
 <li>Sources Panel 的左侧分别是 Sources 和 Content scripts和Snippets<ul>
 <li><img src="/img/Chrome/7.png" alt="按钮"></li>
@@ -379,7 +384,7 @@
 </li>
 </ul>
 </li>
-<li>6.Network 网络请求标签页：可以看到所有的资源请求，包括网络请求，图片资源，html,css，js文件等请求，可以根据需求筛选请求项，一般多用于网络请求的查看和分析，分析后端接口是否正确传输，获取的数据是否准确，请求头，请求参数的查看<ul>
+<li><code>6.Network 网络请求标签页：</code>可以看到所有的资源请求，包括网络请求，图片资源，html,css，js文件等请求，可以根据需求筛选请求项，一般多用于网络请求的查看和分析，分析后端接口是否正确传输，获取的数据是否准确，请求头，请求参数的查看<ul>
 <li><img src="/img/Chrome/11.png" alt="按钮"></li>
 <li>所有的资源</li>
 <li>以上我选择了All，就会把该页面所有资源文件请求下来，如果只选择XHR 异步请求资源，则我们可以分析相关的请求信息</li>
@@ -390,21 +395,21 @@
 <li>预览请求的数据</li>
 </ul>
 </li>
-<li>7.Timeline标签页可以显示JS执行时间、页面元素渲染时间，不做过多介绍</li>
-<li>8.Profiles标签页可以查看CPU执行时间与内存占用，不做过多介绍</li>
-<li>9.Resources标签页会列出所有的资源，以及HTML5的Database和LocalStore等，你可以对存储的内容编辑和删除 不做过多介绍</li>
-<li>10.Security标签页 可以告诉你这个网站的安全性，查看有效的证书等</li>
-<li>11.Audits标签页 可以帮你分析页面性能，有助于优化前端页面，分析后得到的报告<ul>
+<li><code>7.Timeline</code>标签页可以显示JS执行时间、页面元素渲染时间，不做过多介绍</li>
+<li><code>8.Profiles</code>标签页可以查看CPU执行时间与内存占用，不做过多介绍</li>
+<li><code>9.Resources</code>标签页会列出所有的资源，以及HTML5的Database和LocalStore等，你可以对存储的内容编辑和删除 不做过多介绍</li>
+<li><code>10.Security</code>标签页可以告诉你这个网站的安全性，查看有效的证书等</li>
+<li><code>11.Audits</code>标签页可以帮你分析页面性能，有助于优化前端页面，分析后得到的报告<ul>
 <li><img src="/img/Chrome/14.png" alt="按钮"></li>
 <li>分析结果<h2 id="Sources资源页面的断点调试"><a href="#Sources资源页面的断点调试" class="headerlink" title="Sources资源页面的断点调试"></a>Sources资源页面的断点调试</h2></li>
 </ul>
 </li>
-<li>1.如何调试：<ul>
+<li><code>1.如何调试：</code><ul>
 <li>调试js代码，肯定是我们常用的功能，那么如何打断点，找到要调试的文件，然后在内容源代码左侧的代码标记行处点击即可打上一个断点</li>
 <li><img src="/img/Chrome/15.png" alt="调试"></li>
 </ul>
 </li>
-<li>2.断点与 js代码修改<ul>
+<li><code>2.断点与 js代码修改</code><ul>
 <li>看下面这张图，我在一个名为toggleTab的方法下打了两个断点，当开始执行我们的点击切换tab行为后，代码会在执行的断点出停下来，并把相关的数据展示一部分，此时可以在已经执行过得代码处，把鼠标放上去，即可查看相关的具体数据信息，同时我们可以使用右侧的功能键进行调试，右侧最上面一排分别是：暂停/继续、单步执行(F10快捷键)、单步跳入此执行块(F11快捷键)、单步跳出此执行块、禁用/启用所有断点。下面是各种具体的功能区</li>
 <li><img src="/img/Chrome/16.png" alt="断点"><ul>
 <li>在代码中打断点</li>
@@ -415,12 +420,12 @@
 </li>
 </ul>
 </li>
-<li>3.快速进入调试的方法    <ul>
+<li><code>3.快速进入调试的方法</code> <ul>
 <li>当我们的代码执行到某个程序块方法处，这个方法上可能你并没有设置相关的断点，此时你可以F11进入此程序块，但是往往我们的项目都是经过很多源代码封装好的方法，有时候进入后，会走很多底层的封装方法，需要很多步骤才能真正进入这个函数块，此时将鼠标放在此函数上，会出现相关提示，会告诉你在该文件的哪一行代码处，点击即可直接看到这个函数，然后临时打上断点，按F10或者点击右上角的第二个按钮即可直接进入此函数的断点处</li>
 <li><img src="/img/Chrome/18.png" alt="快速调试"></li>
 </ul>
 </li>
-<li>4.调试的功能区域 <ul>
+<li><code>4.调试的功能区域</code> <ul>
 <li>每一个功能区，都有它相关的左右，先来看一张图，它都有哪些功能</li>
 <li><img src="/img/Chrome/19.png" alt="功能区域"><ul>
 <li>Call Stack调用栈：当断点执行到某一程序块处停下来后，右侧调试区的 Call Stack 会显示当前断点所处的方法调用栈，从上到下由最新调用处依次往下排列，Call Stack 列表的下方是Scope Variables列表可以查看此时局部变量和全局变量的值。图中可以看出，我们最先走了toggleTab这个方法，然后走到了一个更新对象的方法上，当前调用在哪里，箭头会帮你指向哪里，同时我们可以点击，调用栈列表上的任意一处，即可回头再去看看代码</li>
@@ -455,7 +460,7 @@
 </ul>
 <h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
 <li>写到这里这篇总结就结束了，也许有很多写的不到位的地方，也有一些专业用词不严谨的地方，希望看到的读者可以和我一起交流，我也非常乐意我的总结可以给 刚刚学会编程需要调试的同学受用，再此之前我一直在寻找一篇从头到尾的调试教学文章，我一直没有找到，要么是一点点的片段讲解，要么是专讲js断点调试，所以索性后来就直接看了 Chrome Developer Tools 的英文官方文档，并结合自己的一些小使用心得总结出此文，希望受到指点和修正 也希望可以帮助一些同学~</li>
-<li>转载于：igeekbar.com      </li>
+<li>转载于：<a href="http://www.igeekbar.com" target="_blank" rel="external">http://www.igeekbar.com</a>    </li>
 </ul>
       
     </div>
@@ -463,13 +468,13 @@
   </div>
   
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/01/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Dr.Lester</a></p>
-        <p><span>发布时间:</span>2017-04-04, 21:42:27</p>
-        <p><span>最后更新:</span>2017-04-06, 21:04:03</p>
+        <p><span>发布时间:</span>2017-04-01, 21:42:27</p>
+        <p><span>最后更新:</span>2017-04-07, 00:06:49</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/04/Chrome/" title="非常完整的Chrome浏览器客户端调试大全">http://godql.com/2017/04/04/Chrome/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://godql.com/2017/04/04/Chrome/　　作者: Dr.Lester" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/01/Chrome/" title="非常完整的Chrome浏览器客户端调试大全">http://godql.com/2017/04/01/Chrome/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://godql.com/2017/04/01/Chrome/　　作者: Dr.Lester" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -566,7 +571,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/05/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/05/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li></ul>
 
 
     <script>
@@ -588,16 +593,16 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style="display:none">
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数">本站到访数</span><!-- <i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"> -->
                         </span>
-                    </span>
+                    
                 
                 
                     <span>| </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style="display:none">
-                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit" title="本页阅读量">本页阅读量<span id="busuanzi_value_page_pv"></span><!-- <i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i> -->
                         </span>
                     </span>
                 
