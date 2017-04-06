@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Godql Code</title>
+  <subtitle>迈入新世界，为了成为独当一面的 Java 后端工程师！</subtitle>
+  <link href="/atom.xml" rel="self"/>
   
+  <link href="http://godql.com/"/>
+  <updated>2017-04-06T01:09:39.273Z</updated>
+  <id>http://godql.com/</id>
   
+  <author>
+    <name>Dr.Lester</name>
+    <email>googllwebmaster@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>非常完整的Chrome浏览器客户端调试大全</title>
+    <link href="http://godql.com/2017/04/04/Chrome/"/>
+    <id>http://godql.com/2017/04/04/Chrome/</id>
+    <published>2017-04-04T13:42:27.000Z</published>
+    <updated>2017-04-06T01:09:39.273Z</updated>
     
-    <entry>
-      <title><![CDATA[非常完整的Chrome浏览器客户端调试大全]]></title>
-      <url>http://godql.com/2017/04/04/Chrome/</url>
-      <content type="html"><![CDATA[<a id="more"></a>
+    <content type="html"><![CDATA[<a id="more"></a>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
 <p>“工欲善其事，必先利其器” </p>
 </blockquote>
@@ -154,32 +170,34 @@
 <li>写到这里这篇总结就结束了，也许有很多写的不到位的地方，也有一些专业用词不严谨的地方，希望看到的读者可以和我一起交流，我也非常乐意我的总结可以给 刚刚学会编程需要调试的同学受用，再此之前我一直在寻找一篇从头到尾的调试教学文章，我一直没有找到，要么是一点点的片段讲解，要么是专讲js断点调试，所以索性后来就直接看了 Chrome Developer Tools 的英文官方文档，并结合自己的一些小使用心得总结出此文，希望受到指点和修正 也希望可以帮助一些同学~</li>
 <li>转载于：igeekbar.com      </li>
 </ul>]]></content>
-      
-        <categories>
-            
-            <category> Chrome </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Chrome </tag>
-            
-            <tag> 客户端 </tag>
-            
-            <tag> 调试 </tag>
-            
-            <tag> 前端 </tag>
-            
-        </tags>
-        
-    </entry>
     
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://godql.com/2017/04/04/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <summary type="html">
+    
+      本文将讲解基于 Chrome浏览器客户端 如何更好的调试！
+    
+    </summary>
+    
+      <category term="Chrome" scheme="http://godql.com/categories/Chrome/"/>
+    
+    
+      <category term="Chrome" scheme="http://godql.com/tags/Chrome/"/>
+    
+      <category term="客户端" scheme="http://godql.com/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+      <category term="调试" scheme="http://godql.com/tags/%E8%B0%83%E8%AF%95/"/>
+    
+      <category term="前端" scheme="http://godql.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://godql.com/2017/04/04/hello-world/"/>
+    <id>http://godql.com/2017/04/04/hello-world/</id>
+    <published>2017-04-04T06:55:05.156Z</published>
+    <updated>2017-04-04T06:55:05.156Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -188,10 +206,14 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
-      
-        
-    </entry>
     
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
   
-  
-</search>
+</feed>
