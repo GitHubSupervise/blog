@@ -1,1 +1,38 @@
-jQuery(document).ready(function(){function a(a){a&&n.css("background-image","url("+a+")"),$("#DonateText,#donateBox,#github").addClass("blur"),e.fadeIn(300,function(a){n.addClass("showQR")})}var e=$("#QRBox"),n=$("#MainBox"),o="images/AliPayQR.png",t="images/WeChanQR.png";$("#donateBox>li").click(function(e){var n=$(this).attr("id");"AliPay"===n?a(o):"WeChat"===n&&a(t)}),n.click(function(a){n.removeClass("showQR").addClass("hideQR"),setTimeout(function(a){e.fadeOut(300,function(a){n.removeClass("hideQR")}),$("#DonateText,#donateBox,#github").removeClass("blur")},600)})});
+jQuery(document).ready(function() {
+	var QRBox	=	$('#QRBox');
+	var MainBox	=	$('#MainBox');
+	var AliPayQR	=	'images/AliPayQR.png';
+	var WeChanQR	=	'images/WeChanQR.png';
+
+	
+
+	function showQR(QR) {
+		if (QR) {
+			MainBox.css('background-image','url('+QR+')');
+		}
+		$('#DonateText,#donateBox,#github').addClass('blur');
+		QRBox.fadeIn(300,function(argument) {
+			MainBox.addClass('showQR');
+		});
+	}
+
+	$('#donateBox>li').click(function(event) {
+		var thisID	=	$(this).attr('id');
+		if (thisID === 'AliPay') {
+			showQR(AliPayQR);
+		} else if (thisID === 'WeChat') {
+			showQR(WeChanQR);
+		}
+	});
+
+	MainBox.click(function(event) {
+		MainBox.removeClass('showQR').addClass('hideQR');
+		setTimeout (function(a) {
+			QRBox.fadeOut(300,function(argument) {
+				MainBox.removeClass('hideQR');
+			});
+			$('#DonateText,#donateBox,#github').removeClass('blur');
+		},600);
+
+	});
+});
