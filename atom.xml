@@ -4,9 +4,9 @@
   <subtitle>迈入新世界，为了成为独当一面的 Java 后端工程师！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://godql.com/"/>
+  <link href="https://www.godql.com/"/>
   <updated>2017-04-06T15:36:48.550Z</updated>
-  <id>http://godql.com/</id>
+  <id>https://www.godql.com/</id>
   
   <author>
     <name>Dr.Lester</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>《番茄工作法图解》思维导图读书笔记分享</title>
-    <link href="http://godql.com/2017/04/05/Execution_of_work/"/>
-    <id>http://godql.com/2017/04/05/Execution_of_work/</id>
+    <link href="https://www.godql.com/2017/04/05/Execution_of_work/"/>
+    <id>https://www.godql.com/2017/04/05/Execution_of_work/</id>
     <published>2017-04-05T14:48:29.000Z</published>
     <updated>2017-04-06T15:36:48.550Z</updated>
     
@@ -38,28 +38,27 @@
     
     </summary>
     
-      <category term="思维导图" scheme="http://godql.com/categories/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+      <category term="思维导图" scheme="https://www.godql.com/categories/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
     
     
-      <category term="思维导图" scheme="http://godql.com/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+      <category term="思维导图" scheme="https://www.godql.com/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
     
-      <category term="笔记" scheme="http://godql.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://www.godql.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="工作法" scheme="http://godql.com/tags/%E5%B7%A5%E4%BD%9C%E6%B3%95/"/>
+      <category term="工作法" scheme="https://www.godql.com/tags/%E5%B7%A5%E4%BD%9C%E6%B3%95/"/>
     
-      <category term="读书" scheme="http://godql.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+      <category term="读书" scheme="https://www.godql.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>非常完整的Chrome浏览器客户端调试大全</title>
-    <link href="http://godql.com/2017/04/01/Chrome/"/>
-    <id>http://godql.com/2017/04/01/Chrome/</id>
+    <link href="https://www.godql.com/2017/04/01/Chrome/"/>
+    <id>https://www.godql.com/2017/04/01/Chrome/</id>
     <published>2017-04-01T13:42:27.000Z</published>
-    <updated>2017-04-06T16:06:49.958Z</updated>
+    <updated>2017-04-08T09:10:54.758Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
-<p>top: 1000</p>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
 <p>“工欲善其事，必先利其器” </p>
 </blockquote>
@@ -206,16 +205,16 @@
     
     </summary>
     
-      <category term="Chrome" scheme="http://godql.com/categories/Chrome/"/>
+      <category term="Chrome" scheme="https://www.godql.com/categories/Chrome/"/>
     
     
-      <category term="Chrome" scheme="http://godql.com/tags/Chrome/"/>
+      <category term="Chrome" scheme="https://www.godql.com/tags/Chrome/"/>
     
-      <category term="客户端" scheme="http://godql.com/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+      <category term="客户端" scheme="https://www.godql.com/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
     
-      <category term="调试" scheme="http://godql.com/tags/%E8%B0%83%E8%AF%95/"/>
+      <category term="调试" scheme="https://www.godql.com/tags/%E8%B0%83%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://godql.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://www.godql.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
