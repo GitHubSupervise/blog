@@ -75,7 +75,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -186,6 +188,8 @@
                             
                                 <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
+                                <a class="fa Google" href="https://plus.google.com/101569408012577181557" title="Google"></a>
+                            
                         </ul>
                     </nav>
                 </section>
@@ -253,6 +257,8 @@
                                 <a class="fa GitHub" target="_blank" href="https://github.com/GitHubSupervise" title="GitHub"></a>
                             
                                 <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Google" target="_blank" href="https://plus.google.com/101569408012577181557" title="Google"></a>
                             
                         </ul>
             </nav>
@@ -412,6 +418,26 @@
 
 
 
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 <div class="scroll" id="scroll">
     <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
