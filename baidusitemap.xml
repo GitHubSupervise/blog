@@ -3,6 +3,58 @@
 
 
     
+  <url>
+    <loc>http://GitHubSupervise.io/blog/blog/2017/04/16/MVC/</loc>
+    <lastmod>2017-04-15T20:16:07.071Z</lastmod>
+    <data>
+        <display>
+        <title>如何优雅的写一个Java MVC框架</title>
+        <pubTime>2017-04-15T20:05:27.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>MVC</tag>
+         
+        <tag>框架</tag>
+         
+        <tag>优雅</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://GitHubSupervise.io/blog/blog/2017/04/16/javaHighConcurrencyOne/</loc>
+    <lastmod>2017-04-15T20:12:27.892Z</lastmod>
+    <data>
+        <display>
+        <title>Java高并发秒杀系统API</title>
+        <pubTime>2017-04-15T20:05:27.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>并发</tag>
+         
+        <tag>秒杀系统</tag>
+         
+        <tag>交互</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://GitHubSupervise.io/blog/blog/2017/04/05/Execution_of_work/</loc>

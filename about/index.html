@@ -96,6 +96,20 @@
     </script>
 
 
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
 </head></html>
 <body>
   <div id="container">
@@ -148,11 +162,11 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -240,7 +254,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Chrome/">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/客户端/">客户端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/工作法/">工作法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/思维导图/">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/读书/">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/调试/">调试</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Chrome/">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MVC/">MVC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/交互/">交互</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/优雅/">优雅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/客户端/">客户端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/工作法/">工作法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/并发/">并发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/思维导图/">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/秒杀系统/">秒杀系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/读书/">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/调试/">调试</a></li></ul>
                     </div>
                 </section>
                 
@@ -307,7 +321,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me">
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
       <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
@@ -439,7 +453,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style="display:none">
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -448,7 +462,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style="display:none">
-                        <span id="page-visit" title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -483,9 +497,9 @@ MathJax.Hub.Queue(function() {
 </script>
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide()" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

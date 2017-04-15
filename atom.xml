@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://GitHubSupervise.io/blog/"/>
-  <updated>2017-04-15T18:36:36.438Z</updated>
+  <updated>2017-04-15T20:16:07.071Z</updated>
   <id>http://GitHubSupervise.io/blog/</id>
   
   <author>
@@ -14,6 +14,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何优雅的写一个Java MVC框架</title>
+    <link href="http://GitHubSupervise.io/blog/2017/04/16/MVC/"/>
+    <id>http://GitHubSupervise.io/blog/2017/04/16/MVC/</id>
+    <published>2017-04-15T20:05:27.000Z</published>
+    <updated>2017-04-15T20:16:07.071Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>待更新</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      本文分享一些自己对框架的理解，对于写过一些框架的人可能会产生一些共鸣欢迎讨论，如果你正在写或正打算写一个框架可能会给你一些启发
+    
+    </summary>
+    
+      <category term="Java" scheme="http://GitHubSupervise.io/blog/categories/Java/"/>
+    
+    
+      <category term="java" scheme="http://GitHubSupervise.io/blog/tags/java/"/>
+    
+      <category term="MVC" scheme="http://GitHubSupervise.io/blog/tags/MVC/"/>
+    
+      <category term="框架" scheme="http://GitHubSupervise.io/blog/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="优雅" scheme="http://GitHubSupervise.io/blog/tags/%E4%BC%98%E9%9B%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java高并发秒杀系统API</title>
+    <link href="http://GitHubSupervise.io/blog/2017/04/16/javaHighConcurrencyOne/"/>
+    <id>http://GitHubSupervise.io/blog/2017/04/16/javaHighConcurrencyOne/</id>
+    <published>2017-04-15T20:05:27.000Z</published>
+    <updated>2017-04-15T20:12:27.892Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>待更新</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      本文总结自己开发秒杀系统Web层的过程，主要介绍前端交互设计、Restful:url满足Restful设计规范、Spring MVC、bootstrap+jquery这四个方面的开发。
+    
+    </summary>
+    
+      <category term="Java" scheme="http://GitHubSupervise.io/blog/categories/Java/"/>
+    
+    
+      <category term="java" scheme="http://GitHubSupervise.io/blog/tags/java/"/>
+    
+      <category term="并发" scheme="http://GitHubSupervise.io/blog/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="秒杀系统" scheme="http://GitHubSupervise.io/blog/tags/%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="交互" scheme="http://GitHubSupervise.io/blog/tags/%E4%BA%A4%E4%BA%92/"/>
+    
+  </entry>
   
   <entry>
     <title>《番茄工作法图解》思维导图读书笔记分享</title>

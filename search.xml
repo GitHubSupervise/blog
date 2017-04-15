@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title><![CDATA[如何优雅的写一个Java MVC框架]]></title>
+      <url>http://GitHubSupervise.io/blog/2017/04/16/MVC/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>待更新</li>
+</ul>]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> MVC </tag>
+            
+            <tag> 框架 </tag>
+            
+            <tag> 优雅 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java高并发秒杀系统API]]></title>
+      <url>http://GitHubSupervise.io/blog/2017/04/16/javaHighConcurrencyOne/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>待更新</li>
+</ul>]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 并发 </tag>
+            
+            <tag> 秒杀系统 </tag>
+            
+            <tag> 交互 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[《番茄工作法图解》思维导图读书笔记分享]]></title>
       <url>http://GitHubSupervise.io/blog/2017/04/05/Execution_of_work/</url>
       <content type="html"><![CDATA[<a id="more"></a>
