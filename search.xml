@@ -13,7 +13,7 @@
 <li><img src="/img/potato.png" alt="思维导图"></li>
 </ul>
 </li>
-<li>思维导图笔记作者：<a href="http://www.weibo.com/fisher205" target="_blank" rel="external">http://www.weibo.com/fisher205</a><iframe src="http://www.godql.com/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+<li>思维导图笔记作者：<a href="http://www.weibo.com/fisher205" target="_blank" rel="external">http://www.weibo.com/fisher205</a><iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 
 </li>
 </ul>]]></content>
@@ -177,7 +177,7 @@
 </li>
 </ul>
 <h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
-<li>写到这里这篇总结就结束了，也许有很多写的不到位的地方，也有一些专业用词不严谨的地方，希望看到的读者可以和我一起交流，我也非常乐意我的总结可以给 刚刚学会编程需要调试的同学受用，再此之前我一直在寻找一篇从头到尾的调试教学文章，我一直没有找到，要么是一点点的片段讲解，要么是专讲js断点调试，所以索性后来就直接看了 Chrome Developer Tools 的英文官方文档，并结合自己的一些小使用心得总结出此文，希望受到指点和修正 也希望可以帮助一些同学~<iframe src="http://www.godql.com/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+<li>写到这里这篇总结就结束了，也许有很多写的不到位的地方，也有一些专业用词不严谨的地方，希望看到的读者可以和我一起交流，我也非常乐意我的总结可以给 刚刚学会编程需要调试的同学受用，再此之前我一直在寻找一篇从头到尾的调试教学文章，我一直没有找到，要么是一点点的片段讲解，要么是专讲js断点调试，所以索性后来就直接看了 Chrome Developer Tools 的英文官方文档，并结合自己的一些小使用心得总结出此文，希望受到指点和修正 也希望可以帮助一些同学~<iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 
 
 
