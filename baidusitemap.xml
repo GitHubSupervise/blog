@@ -4,6 +4,38 @@
 
     
   <url>
+    <loc>http://GitHubSupervise.io/blog/blog/2017/04/16/sshIntegration/</loc>
+    <lastmod>2017-04-15T22:09:31.120Z</lastmod>
+    <data>
+        <display>
+        <title>SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</title>
+        <pubTime>2017-04-15T21:40:27.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>框架</tag>
+         
+        <tag>Struts</tag>
+         
+        <tag>Spring</tag>
+         
+        <tag>Hibernate</tag>
+         
+        <tag>IOC</tag>
+         
+        <tag>AOP</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://GitHubSupervise.io/blog/blog/2017/04/16/MVC/</loc>
     <lastmod>2017-04-15T20:16:07.071Z</lastmod>
     <data>
