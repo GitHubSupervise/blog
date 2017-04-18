@@ -17,12 +17,12 @@
 <meta name="keywords" content="java,IOC,AOP,框架,Struts,Spring,Hibernate">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓">
-<meta property="og:url" content="http://GitHubSupervise.io/blog/2017/04/16/sshIntegration/index.html">
+<meta property="og:url" content="http://GitHubSupervise.io/blog/2017/04/01/sshIntegration/index.html">
 <meta property="og:site_name" content="Godql Code">
 <meta property="og:description" content="本文分享自己对ssh三大框架的理解，有问题欢迎来讨论">
 <meta property="og:image" content="http://githubsupervise.io/img/Spring.png">
 <meta property="og:image" content="http://githubsupervise.io/img/Ioc.png">
-<meta property="og:updated_time" content="2017-04-17T07:23:14.162Z">
+<meta property="og:updated_time" content="2017-04-18T07:23:01.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓">
 <meta name="twitter:description" content="本文分享自己对ssh三大框架的理解，有问题欢迎来讨论">
@@ -330,8 +330,8 @@
       <div class="body-wrap"><article id="post-sshIntegration" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/blog/2017/04/16/sshIntegration/" class="article-date">
-      <time datetime="2017-04-15T21:40:27.000Z" itemprop="datePublished">2017-04-16</time>
+      <a href="/blog/2017/04/01/sshIntegration/" class="article-date">
+      <time datetime="2017-03-31T21:40:27.000Z" itemprop="datePublished">2017-04-01</time>
 </a>
     </div>
   
@@ -442,7 +442,7 @@
 <li>AOP 让开发人员可以创建非行为性的关注点，称为横切关注点，并将它们插入到应用程序代码中。使用 AOP 后，公共服务 （比如日志、持久性、事务等）就可以分解成方面并应用到域对象上，同时不会增加域对象的对象模型的复杂性。</li>
 <li>IOC 允许创建一个可以构造对象的应用环境，然后向这些对象传递它们的协作对象。正如单词 倒置 所表明的，IOC 就像反 过来的 JNDI。没有使用一堆抽象工厂、服务定位器、单元素（singleton）和直接构造（straight construction），每一个对象都是用其协作对象构造的。因此是由容器管理协作对象（collaborator）。<br>Spring即使一个AOP框架，也是一IOC容器。 Spring 最好的地方是它有助于您替换对象。有了 Spring，只要用 JavaBean 属性和配置文件加入依赖性（协作对象）。然后可以很容易地在需要时替换具有类似接口的协作对象。  <h4 id="Spring-框架是一个分层架构，由7个定义良好的模块组成。"><a href="#Spring-框架是一个分层架构，由7个定义良好的模块组成。" class="headerlink" title="Spring 框架是一个分层架构，由7个定义良好的模块组成。"></a>Spring 框架是一个分层架构，由7个定义良好的模块组成。</h4></li>
 <li>Spring 模块构建在核心容器之上，核心容器定义了创建、配置和管理 bean 的方式</li>
-<li><img src="/img/Spring.png" alt="Spring7大模块"> </li>
+<li><img src="/img/Spring.png" alt="Spring示图"> </li>
 <li>组成 Spring 框架的每个模块（或组件）都可以单独存在，或者与其他一个或多个模块联合实现。每个模块的功能如下：</li>
 </ul>
 </li>
@@ -476,7 +476,7 @@
 </ul>
 <p>在典型的 IOC 场景中，容器创建了所有对象，并设置必要的属性将它们连接在一起，决定什么时间调用方法。下表列出了 IOC 的一个实现模式。</p>
 <ul>
-<li><img src="/img/Ioc.png" alt="IOC"> </li>
+<li><img src="/img/Ioc.png" alt="IOC示图"> </li>
 </ul>
 </li>
 </ul>
@@ -487,13 +487,13 @@
   </div>
   
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/blog/2017/04/16/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></p>
+        <p><span>本文标题:</span><a href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Dr.Lester</a></p>
-        <p><span>发布时间:</span>2017-04-16, 05:40:27</p>
-        <p><span>最后更新:</span>2017-04-17, 15:23:14</p>
+        <p><span>发布时间:</span>2017-04-01, 05:40:27</p>
+        <p><span>最后更新:</span>2017-04-18, 15:23:01</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/blog/2017/04/16/sshIntegration/" title="SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓">http://GitHubSupervise.io/blog/2017/04/16/sshIntegration/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://GitHubSupervise.io/blog/2017/04/16/sshIntegration/　　作者: Dr.Lester" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/blog/2017/04/01/sshIntegration/" title="SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓">http://GitHubSupervise.io/blog/2017/04/01/sshIntegration/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://GitHubSupervise.io/blog/2017/04/01/sshIntegration/　　作者: Dr.Lester" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -506,15 +506,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/blog/2017/04/16/javaHighConcurrencyOne/">
-                    Java高并发秒杀系统API
+                <a href="/blog/2017/03/17/IOC-AOP/">
+                    深入理解IOC与AOP
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/blog/2017/04/17/IOC-AOP/">
-                    深入理解IOC与AOP
+                <a href="/blog/2017/04/16/MVC/">
+                    如何优雅的写一个Java MVC框架
                 </a>
             </div>
         
@@ -586,7 +586,7 @@
 
 <div class="scroll" id="post-nav-button">
         
-            <a href="/blog/2017/04/16/javaHighConcurrencyOne/" title="上一篇: Java高并发秒杀系统API">
+            <a href="/blog/2017/03/17/IOC-AOP/" title="上一篇: 深入理解IOC与AOP">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -594,13 +594,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/blog/2017/04/17/IOC-AOP/" title="下一篇: 深入理解IOC与AOP">
+            <a href="/blog/2017/04/16/MVC/" title="下一篇: 如何优雅的写一个Java MVC框架">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/MVC/">如何优雅的写一个Java MVC框架</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/05/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/MVC/">如何优雅的写一个Java MVC框架</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li></ul>
 
 
     <script>

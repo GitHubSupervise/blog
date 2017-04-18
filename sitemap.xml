@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/04/17/IOC-AOP/</loc>
+    <loc>http://GitHubSupervise.io/blog/2017/02/16/Execution_of_work/</loc>
     
-    <lastmod>2017-04-17T07:35:44.485Z</lastmod>
+    <lastmod>2017-04-18T07:23:01.753Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/04/16/sshIntegration/</loc>
+    <loc>http://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
     
-    <lastmod>2017-04-17T07:23:14.162Z</lastmod>
+    <lastmod>2017-04-18T07:23:01.739Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/2017/04/01/sshIntegration/</loc>
+    
+    <lastmod>2017-04-18T07:23:01.732Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/2017/03/17/IOC-AOP/</loc>
+    
+    <lastmod>2017-04-18T07:23:01.727Z</lastmod>
     
   </url>
   
@@ -33,20 +47,6 @@
     <loc>http://GitHubSupervise.io/blog/about/index.html</loc>
     
     <lastmod>2017-04-15T18:51:22.246Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/2017/04/05/Execution_of_work/</loc>
-    
-    <lastmod>2017-04-15T18:36:36.438Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/2017/04/01/Chrome/</loc>
-    
-    <lastmod>2017-04-15T18:36:36.432Z</lastmod>
     
   </url>
   
