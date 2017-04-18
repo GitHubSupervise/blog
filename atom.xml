@@ -518,7 +518,7 @@
     <link href="http://GitHubSupervise.io/blog/2017/01/02/Awesome-java-cn/"/>
     <id>http://GitHubSupervise.io/blog/2017/01/02/Awesome-java-cn/</id>
     <published>2017-01-01T21:40:27.000Z</published>
-    <updated>2017-04-18T07:28:36.459Z</updated>
+    <updated>2017-04-18T07:39:26.971Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <p>我想很多程序员应该记得 GitHub 上有一个 Awesome - XXX 系列的资源整理。<a href="https://github.com/akullpp/awesome-java" target="_blank" rel="external">awesome-java</a> 就是 akullpp 发起维护的 Java 资源列表，内容包括：构建工具、数据库、框架、模板、安全、代码分析、日志、第三方库、书籍、Java 站点等等。伯乐在线已经把 awesome-java 资源列表翻成中文后发布于 <a href="http://www.importnew.com/14429.html" target="_blank" rel="external">ImportNew</a>。</p>
@@ -1143,7 +1143,7 @@
     
     <summary type="html">
     
-      啥都有
+      内容包括：构建工具、数据库、框架、模板、安全、代码分析、日志、第三方库、书籍、Java 站点等
     
     </summary>
     
