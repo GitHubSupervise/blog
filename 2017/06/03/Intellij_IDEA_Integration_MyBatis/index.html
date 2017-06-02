@@ -17,13 +17,13 @@
 <meta name="keywords" content="Java,SpringMVC,Mybatis,Intellij IDEA,插件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Intellij IDEA 2017集成MyBatis三剑客">
-<meta property="og:url" content="http://GitHubSupervise.io/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/index.html">
+<meta property="og:url" content="http://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/index.html">
 <meta property="og:site_name" content="Godql Code">
 <meta property="og:description" content="本文分享MyBatis-Generate、Mybatis Plus、MyBatis-PageHelper的使用希望能给你一些启发">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/1.png">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/2.png">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/3.png">
-<meta property="og:updated_time" content="2017-06-02T16:20:57.045Z">
+<meta property="og:updated_time" content="2017-06-02T16:55:12.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Intellij IDEA 2017集成MyBatis三剑客">
 <meta name="twitter:description" content="本文分享MyBatis-Generate、Mybatis Plus、MyBatis-PageHelper的使用希望能给你一些启发">
@@ -167,11 +167,11 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -326,13 +326,13 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me">
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
       <div class="body-wrap"><article id="post-Intellij_IDEA_Integration_MyBatis" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/" class="article-date">
-      <time datetime="2017-06-02T14:50:36.000Z" itemprop="datePublished">2017-06-02</time>
+      <a href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/" class="article-date">
+      <time datetime="2017-06-02T16:51:36.000Z" itemprop="datePublished">2017-06-03</time>
 </a>
     </div>
   
@@ -364,8 +364,10 @@
         <a id="more"></a>
 <p>MyBatis三剑客指的是：MyBatis-Generate、Mybatis Plus、MyBatis-PageHelper</p>
 <hr>
-<h3 id="一、MyBatis-Generate"><a href="#一、MyBatis-Generate" class="headerlink" title="一、MyBatis-Generate"></a>一、MyBatis-Generate</h3><p>使用 Mybatis Generator 这个maven插件来快速生成 Dao 类, mapper 配置文件和 Model 类.  </p>
+<h2 id="MyBatis-Generate"><a href="#MyBatis-Generate" class="headerlink" title="MyBatis-Generate"></a>MyBatis-Generate</h2><blockquote>
+<p>使用 Mybatis Generator 这个maven插件来快速生成 Dao 类, mapper 配置文件和 Model 类.  </p>
 <p>MyBatis Generator（简称MBG）是MyBatis的代码生成器.可以自动查询数据库中的所有表,然后生成可以访问表的基础对象类型.解决了对数据库操作有最大影响的一些简单的CRUD增删改查操作,但是仍需要对联合查询和存储过程手写SQL语句和对象.  </p>
+</blockquote>
 <p><a href="http://mbg.cndocs.tk/" target="_blank" rel="external">MyBatis Generator中文文档</a></p>
 <ul>
 <li><p>1.在pom文件中添加插件</p>
@@ -377,13 +379,15 @@
 <li>资源文件为 datasource.properties 文件，这个可不要，这里用是因为方便管理而已</li>
 </ul>
 </li>
-<li><p>配置generatorConfig.xml与资源文件<br><code>generatorConfig.xml</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;!DOCTYPE generatorConfiguration</div><div class="line">        PUBLIC &quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;</div><div class="line">        &quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot;&gt;</div><div class="line"></div><div class="line">&lt;generatorConfiguration&gt;</div><div class="line">    &lt;!--导入属性配置--&gt;</div><div class="line">    &lt;properties resource=&quot;datasource.properties&quot;&gt;&lt;/properties&gt;</div><div class="line"></div><div class="line">    &lt;!--指定特定数据库的jdbc驱动jar包的位置--&gt;</div><div class="line">    &lt;classPathEntry location=&quot;$&#123;db.driverLocation&#125;&quot;/&gt;</div><div class="line"></div><div class="line">    &lt;context id=&quot;default&quot; targetRuntime=&quot;MyBatis3&quot;&gt;</div><div class="line"></div><div class="line">        &lt;!-- optional，旨在创建class时，对注释进行控制 --&gt;</div><div class="line">        &lt;commentGenerator&gt;</div><div class="line">            &lt;property name=&quot;suppressDate&quot; value=&quot;true&quot;/&gt;</div><div class="line">            &lt;property name=&quot;suppressAllComments&quot; value=&quot;true&quot;/&gt;</div><div class="line">        &lt;/commentGenerator&gt;</div><div class="line"></div><div class="line">        &lt;!--jdbc的数据库连接 --&gt;</div><div class="line">        &lt;jdbcConnection</div><div class="line">                driverClass=&quot;$&#123;db.driverClassName&#125;&quot;</div><div class="line">                connectionURL=&quot;$&#123;db.url&#125;&quot;</div><div class="line">                userId=&quot;$&#123;db.username&#125;&quot;</div><div class="line">                password=&quot;$&#123;db.password&#125;&quot;&gt;</div><div class="line">        &lt;/jdbcConnection&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制 --&gt;</div><div class="line">        &lt;javaTypeResolver&gt;</div><div class="line">            &lt;property name=&quot;forceBigDecimals&quot; value=&quot;false&quot;/&gt;</div><div class="line">        &lt;/javaTypeResolver&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;!-- Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类</div><div class="line">            targetPackage     指定生成的model生成所在的包名</div><div class="line">            targetProject     指定在该项目下所在的路径</div><div class="line">        --&gt;</div><div class="line">        &lt;!--&lt;javaModelGenerator targetPackage=&quot;com.mmall.pojo&quot; targetProject=&quot;.\src\main\java&quot;&gt;--&gt;</div><div class="line">        &lt;javaModelGenerator targetPackage=&quot;org.mmall.pojo&quot; targetProject=&quot;./src/main/java&quot;&gt;</div><div class="line">            &lt;!-- 是否允许子包，即targetPackage.schemaName.tableName --&gt;</div><div class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;false&quot;/&gt;</div><div class="line">            &lt;!-- 是否对model添加 构造函数 --&gt;</div><div class="line">            &lt;property name=&quot;constructorBased&quot; value=&quot;true&quot;/&gt;</div><div class="line">            &lt;!-- 是否对类CHAR类型的列的数据进行trim操作 --&gt;</div><div class="line">            &lt;property name=&quot;trimStrings&quot; value=&quot;true&quot;/&gt;</div><div class="line">            &lt;!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 --&gt;</div><div class="line">            &lt;property name=&quot;immutable&quot; value=&quot;false&quot;/&gt;</div><div class="line">        &lt;/javaModelGenerator&gt;</div><div class="line"></div><div class="line">        &lt;!--mapper映射文件生成所在的目录 为每一个数据库的表生成对应的SqlMap文件 --&gt;</div><div class="line">        &lt;!--&lt;sqlMapGenerator targetPackage=&quot;mappers&quot; targetProject=&quot;.\src\main\resources&quot;&gt;--&gt;</div><div class="line">        &lt;sqlMapGenerator targetPackage=&quot;mappers&quot; targetProject=&quot;./src/main/resources&quot;&gt;</div><div class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;false&quot;/&gt;</div><div class="line">        &lt;/sqlMapGenerator&gt;</div><div class="line"></div><div class="line">        &lt;!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件 的代码</div><div class="line">                type=&quot;ANNOTATEDMAPPER&quot;,生成Java Model 和基于注解的Mapper对象</div><div class="line">                type=&quot;MIXEDMAPPER&quot;,生成基于注解的Java Model 和相应的Mapper对象</div><div class="line">                type=&quot;XMLMAPPER&quot;,生成SQLMap XML文件和独立的Mapper接口</div><div class="line">        --&gt;</div><div class="line"></div><div class="line">        &lt;!-- targetPackage：mapper接口dao生成的位置 --&gt;</div><div class="line">        &lt;!--&lt;javaClientGenerator type=&quot;XMLMAPPER&quot; targetPackage=&quot;com.mmall.dao&quot; targetProject=&quot;.\src\main\java&quot;&gt;--&gt;</div><div class="line">        &lt;javaClientGenerator type=&quot;XMLMAPPER&quot; targetPackage=&quot;org.mmall.dao&quot; targetProject=&quot;./src/main/java&quot;&gt;</div><div class="line">            &lt;!-- enableSubPackages:是否让schema作为包的后缀 --&gt;</div><div class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;false&quot; /&gt;</div><div class="line">        &lt;/javaClientGenerator&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;table tableName=&quot;mmall_shipping&quot; domainObjectName=&quot;Shipping&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_cart&quot; domainObjectName=&quot;Cart&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_cart_item&quot; domainObjectName=&quot;CartItem&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_category&quot; domainObjectName=&quot;Category&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_order&quot; domainObjectName=&quot;Order&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_order_item&quot; domainObjectName=&quot;OrderItem&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_pay_info&quot; domainObjectName=&quot;PayInfo&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_product&quot; domainObjectName=&quot;Product&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;</div><div class="line">            &lt;columnOverride column=&quot;detail&quot; jdbcType=&quot;VARCHAR&quot; /&gt;</div><div class="line">            &lt;columnOverride column=&quot;sub_images&quot; jdbcType=&quot;VARCHAR&quot; /&gt;</div><div class="line">        &lt;/table&gt;</div><div class="line">        &lt;table tableName=&quot;mmall_user&quot; domainObjectName=&quot;User&quot; enableCountByExample=&quot;false&quot; enableUpdateByExample=&quot;false&quot; enableDeleteByExample=&quot;false&quot; enableSelectByExample=&quot;false&quot; selectByExampleQueryId=&quot;false&quot;&gt;&lt;/table&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;!-- geelynote mybatis插件的搭建 --&gt;</div><div class="line">    &lt;/context&gt;</div><div class="line">&lt;/generatorConfiguration&gt;</div></pre></td></tr></table></figure>
+</ul>
+<ul>
+<li>3.配置generatorConfig.xml与资源文件<br><code>generatorConfig.xml</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</div><div class="line">&lt;!DOCTYPE generatorConfiguration</div><div class="line">        PUBLIC <span class="string">"-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></div><div class="line">        <span class="string">"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"</span>&gt;</div><div class="line"></div><div class="line">&lt;generatorConfiguration&gt;</div><div class="line">    &lt;!--导入属性配置--&gt;</div><div class="line">    &lt;properties resource=<span class="string">"datasource.properties"</span>&gt;&lt;/properties&gt;</div><div class="line"></div><div class="line">    &lt;!--指定特定数据库的jdbc驱动jar包的位置--&gt;</div><div class="line">    &lt;classPathEntry location=<span class="string">"<span class="variable">$&#123;db.driverLocation&#125;</span>"</span>/&gt;</div><div class="line"></div><div class="line">    &lt;context id=<span class="string">"default"</span> targetRuntime=<span class="string">"MyBatis3"</span>&gt;</div><div class="line"></div><div class="line">        &lt;!-- optional，旨在创建class时，对注释进行控制 --&gt;</div><div class="line">        &lt;commentGenerator&gt;</div><div class="line">            &lt;property name=<span class="string">"suppressDate"</span> value=<span class="string">"true"</span>/&gt;</div><div class="line">            &lt;property name=<span class="string">"suppressAllComments"</span> value=<span class="string">"true"</span>/&gt;</div><div class="line">        &lt;/commentGenerator&gt;</div><div class="line"></div><div class="line">        &lt;!--jdbc的数据库连接 --&gt;</div><div class="line">        &lt;jdbcConnection</div><div class="line">                driverClass=<span class="string">"<span class="variable">$&#123;db.driverClassName&#125;</span>"</span></div><div class="line">                connectionURL=<span class="string">"<span class="variable">$&#123;db.url&#125;</span>"</span></div><div class="line">                userId=<span class="string">"<span class="variable">$&#123;db.username&#125;</span>"</span></div><div class="line">                password=<span class="string">"<span class="variable">$&#123;db.password&#125;</span>"</span>&gt;</div><div class="line">        &lt;/jdbcConnection&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制 --&gt;</div><div class="line">        &lt;javaTypeResolver&gt;</div><div class="line">            &lt;property name=<span class="string">"forceBigDecimals"</span> value=<span class="string">"false"</span>/&gt;</div><div class="line">        &lt;/javaTypeResolver&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;!-- Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类</div><div class="line">            targetPackage     指定生成的model生成所在的包名</div><div class="line">            targetProject     指定在该项目下所在的路径</div><div class="line">        --&gt;</div><div class="line">        &lt;!--&lt;javaModelGenerator targetPackage=<span class="string">"com.mmall.pojo"</span> targetProject=<span class="string">".\src\main\java"</span>&gt;--&gt;</div><div class="line">        &lt;javaModelGenerator targetPackage=<span class="string">"org.mmall.pojo"</span> targetProject=<span class="string">"./src/main/java"</span>&gt;</div><div class="line">            &lt;!-- 是否允许子包，即targetPackage.schemaName.tableName --&gt;</div><div class="line">            &lt;property name=<span class="string">"enableSubPackages"</span> value=<span class="string">"false"</span>/&gt;</div><div class="line">            &lt;!-- 是否对model添加 构造函数 --&gt;</div><div class="line">            &lt;property name=<span class="string">"constructorBased"</span> value=<span class="string">"true"</span>/&gt;</div><div class="line">            &lt;!-- 是否对类CHAR类型的列的数据进行trim操作 --&gt;</div><div class="line">            &lt;property name=<span class="string">"trimStrings"</span> value=<span class="string">"true"</span>/&gt;</div><div class="line">            &lt;!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 --&gt;</div><div class="line">            &lt;property name=<span class="string">"immutable"</span> value=<span class="string">"false"</span>/&gt;</div><div class="line">        &lt;/javaModelGenerator&gt;</div><div class="line"></div><div class="line">        &lt;!--mapper映射文件生成所在的目录 为每一个数据库的表生成对应的SqlMap文件 --&gt;</div><div class="line">        &lt;!--&lt;sqlMapGenerator targetPackage=<span class="string">"mappers"</span> targetProject=<span class="string">".\src\main\resources"</span>&gt;--&gt;</div><div class="line">        &lt;sqlMapGenerator targetPackage=<span class="string">"mappers"</span> targetProject=<span class="string">"./src/main/resources"</span>&gt;</div><div class="line">            &lt;property name=<span class="string">"enableSubPackages"</span> value=<span class="string">"false"</span>/&gt;</div><div class="line">        &lt;/sqlMapGenerator&gt;</div><div class="line"></div><div class="line">        &lt;!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件 的代码</div><div class="line">                <span class="built_in">type</span>=<span class="string">"ANNOTATEDMAPPER"</span>,生成Java Model 和基于注解的Mapper对象</div><div class="line">                <span class="built_in">type</span>=<span class="string">"MIXEDMAPPER"</span>,生成基于注解的Java Model 和相应的Mapper对象</div><div class="line">                <span class="built_in">type</span>=<span class="string">"XMLMAPPER"</span>,生成SQLMap XML文件和独立的Mapper接口</div><div class="line">        --&gt;</div><div class="line"></div><div class="line">        &lt;!-- targetPackage：mapper接口dao生成的位置 --&gt;</div><div class="line">        &lt;!--&lt;javaClientGenerator <span class="built_in">type</span>=<span class="string">"XMLMAPPER"</span> targetPackage=<span class="string">"com.mmall.dao"</span> targetProject=<span class="string">".\src\main\java"</span>&gt;--&gt;</div><div class="line">        &lt;javaClientGenerator <span class="built_in">type</span>=<span class="string">"XMLMAPPER"</span> targetPackage=<span class="string">"org.mmall.dao"</span> targetProject=<span class="string">"./src/main/java"</span>&gt;</div><div class="line">            &lt;!-- <span class="built_in">enable</span>SubPackages:是否让schema作为包的后缀 --&gt;</div><div class="line">            &lt;property name=<span class="string">"enableSubPackages"</span> value=<span class="string">"false"</span> /&gt;</div><div class="line">        &lt;/javaClientGenerator&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;table tableName=<span class="string">"mmall_shipping"</span> domainObjectName=<span class="string">"Shipping"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_cart"</span> domainObjectName=<span class="string">"Cart"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_cart_item"</span> domainObjectName=<span class="string">"CartItem"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_category"</span> domainObjectName=<span class="string">"Category"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_order"</span> domainObjectName=<span class="string">"Order"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_order_item"</span> domainObjectName=<span class="string">"OrderItem"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_pay_info"</span> domainObjectName=<span class="string">"PayInfo"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_product"</span> domainObjectName=<span class="string">"Product"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;</div><div class="line">            &lt;columnOverride column=<span class="string">"detail"</span> jdbcType=<span class="string">"VARCHAR"</span> /&gt;</div><div class="line">            &lt;columnOverride column=<span class="string">"sub_images"</span> jdbcType=<span class="string">"VARCHAR"</span> /&gt;</div><div class="line">        &lt;/table&gt;</div><div class="line">        &lt;table tableName=<span class="string">"mmall_user"</span> domainObjectName=<span class="string">"User"</span> <span class="built_in">enable</span>CountByExample=<span class="string">"false"</span> <span class="built_in">enable</span>UpdateByExample=<span class="string">"false"</span> <span class="built_in">enable</span>DeleteByExample=<span class="string">"false"</span> <span class="built_in">enable</span>SelectByExample=<span class="string">"false"</span> selectByExampleQueryId=<span class="string">"false"</span>&gt;&lt;/table&gt;</div><div class="line"></div><div class="line"></div><div class="line">        &lt;!-- geelynote mybatis插件的搭建 --&gt;</div><div class="line">    &lt;/context&gt;</div><div class="line">&lt;/generatorConfiguration&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><code>datasource.properties</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">db.driverLocation =  E:\\jre\\mysql-connector-java-5.1.6.jar</div><div class="line">db.driverClassName = com.mysql.jdbc.Driver</div><div class="line">db.url = jdbc:mysql://127.0.0.1:3306/mmall?characterEncoding=utf-8</div><div class="line">db.username = root</div><div class="line">db.password = root</div></pre></td></tr></table></figure></p>
+<p><code>datasource.properties</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">db.driverLocation =  E:\\jre\\mysql-connector-java-5.1.6.jar</div><div class="line">db.driverClassName = com.mysql.jdbc.Driver</div><div class="line">db.url = jdbc:mysql://127.0.0.1:3306/mmall?characterEncoding=utf-8</div><div class="line">db.username = root</div><div class="line">db.password = root</div></pre></td></tr></table></figure>
 <ul>
-<li>运行<ul>
+<li>4.运行<ul>
 <li>方式一：<br><img src="http://oo31b5ljj.bkt.clouddn.com/2.png" alt="直接运行"></li>
 <li>方式二：<ul>
 <li>在Intellij IDEA添加一个“Run运行”，这个少用 略</li>
@@ -392,9 +396,11 @@
 </ul>
 </li>
 </ul>
-<h3 id="二、Mybatis-Plus"><a href="#二、Mybatis-Plus" class="headerlink" title="二、Mybatis-Plus"></a>二、Mybatis-Plus</h3><p>Mybatis Plus（简称MP）是一个 Mybatis 的增强工具，在 Mybatis 的基础上只做增强不做改变，为简化开发、提高效率而生。<br><a href="http://mp.baomidou.com" target="_blank" rel="external">Mybatis Plus中文文档</a></p>
+<h2 id="Mybatis-Plus"><a href="#Mybatis-Plus" class="headerlink" title="Mybatis-Plus"></a>Mybatis-Plus</h2><blockquote>
+<p>Mybatis Plus（简称MP）是一个 Mybatis 的增强工具，在 Mybatis 的基础上只做增强不做改变，为简化开发、提高效率而生。<br><a href="http://mp.baomidou.com" target="_blank" rel="external">Mybatis Plus中文文档</a></p>
+</blockquote>
 <ul>
-<li><p>功能</p>
+<li><p>1.功能</p>
 <ul>
 <li>提供Mapper接口与配置文件中对应SQL的导航</li>
 <li>编辑XML文件时自动补全</li>
@@ -412,18 +418,21 @@
 <li>快捷键: Option + Enter(Mac) | Alt + Enter(Windows)</li>
 </ul>
 </li>
-<li><p>安装与破解</p>
+<li><p>2.安装与破解</p>
 <ul>
 <li>这是一个IDE插件，目前是收费的，这里我用的是Intellij IDEA的<br><img src="http://oo31b5ljj.bkt.clouddn.com/3.png" alt="安装"> </li>
 <li>装完之后把Intellij IDEA关了，然后打开下面的链接跟着步骤来就可以大功告成<br><a href="http://blog.lanyus.com/archives/235.html" target="_blank" rel="external">插件注册机</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="三、MyBatis-PageHelper"><a href="#三、MyBatis-PageHelper" class="headerlink" title="三、MyBatis-PageHelper"></a>三、MyBatis-PageHelper</h3><p>这个一个通用的分页插件,使用时 Mybatis 最低版本不能低于3.3<br>原理：通过aop再截获我们执行sql的时候把相关的数据再执行一次<br><a href="https://github.com/pagehelper/Mybatis-PageHelper" target="_blank" rel="external">GitHub地址</a></p>
+<h2 id="MyBatis-PageHelper"><a href="#MyBatis-PageHelper" class="headerlink" title="MyBatis-PageHelper"></a>MyBatis-PageHelper</h2><blockquote>
+<p>这个一个通用的分页插件,使用时 Mybatis 最低版本不能低于3.3<br>原理：通过aop再截获我们执行sql的时候把相关的数据再执行一次<br><a href="https://github.com/pagehelper/Mybatis-PageHelper" target="_blank" rel="external">GitHub地址</a></p>
+</blockquote>
 <ul>
-<li><p>1.在pom文件中添加依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!-- mybatis pager --&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;4.1.0&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line"></div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.github.miemiedev&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;mybatis-paginator&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.2.17&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line"></div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.github.jsqlparser&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;jsqlparser&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;0.9.4&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+<li>1.在pom文件中添加依赖<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!-- mybatis pager --&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;4.1.0&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line"></div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.github.miemiedev&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;mybatis-paginator&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.2.17&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line"></div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;com.github.jsqlparser&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;jsqlparser&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;0.9.4&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
 </li>
+</ul>
+<ul>
 <li><p>2.在spring配置文件内添加配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;</div><div class="line">    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;</div><div class="line">    &lt;property name=&quot;mapperLocations&quot; value=&quot;classpath*:mappers/*Mapper.xml&quot;&gt;&lt;/property&gt;</div><div class="line"></div><div class="line">    &lt;!-- 分页插件 --&gt;</div><div class="line">    &lt;property name=&quot;plugins&quot;&gt;</div><div class="line">        &lt;array&gt;</div><div class="line">            &lt;bean class=&quot;com.github.pagehelper.PageHelper&quot;&gt;</div><div class="line">                &lt;property name=&quot;properties&quot;&gt;</div><div class="line">                    &lt;value&gt;</div><div class="line">                        &lt;!-- 数据库方言 --&gt;</div><div class="line">                        dialect=mysql</div><div class="line">                    &lt;/value&gt;</div><div class="line">                &lt;/property&gt;</div><div class="line">            &lt;/bean&gt;</div><div class="line">        &lt;/array&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line">&lt;/bean&gt;</div></pre></td></tr></table></figure>
 </li>
@@ -437,17 +446,17 @@
   </div>
   
     <div class="copyright">
-        <p><span>Title:</span><a href="/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">Dr.Lester</a></p>
-        <p><span>Created:</span>2017-06-02, 22:50:36</p>
-        <p><span>Updated:</span>2017-06-03, 00:20:57</p>
+        <p><span>本文标题:</span><a href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Dr.Lester</a></p>
+        <p><span>发布时间:</span>2017-06-03, 00:51:36</p>
+        <p><span>最后更新:</span>2017-06-03, 00:55:12</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/" title="Intellij IDEA 2017集成MyBatis三剑客">http://GitHubSupervise.io/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/</a>
-            <span class="copy-path" data-clipboard-text="From http://GitHubSupervise.io/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/　　By Dr.Lester" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/" title="Intellij IDEA 2017集成MyBatis三剑客">http://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/　　作者: Dr.Lester" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -456,8 +465,8 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/blog/2017/04/16/MVC/">
-                    如何优雅的写一个Java MVC框架
+                <a href="/blog/2017/04/16/javaHighConcurrencyOne/">
+                    Java高并发秒杀系统API
                 </a>
             </div>
         
@@ -468,9 +477,9 @@
 
 </article>
 <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
+        <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、MyBatis-Generate"><span class="toc-number">1.</span> <span class="toc-text">一、MyBatis-Generate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、Mybatis-Plus"><span class="toc-number">2.</span> <span class="toc-text">二、Mybatis-Plus</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、MyBatis-PageHelper"><span class="toc-number">3.</span> <span class="toc-text">三、MyBatis-PageHelper</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MyBatis-Generate"><span class="toc-number">1.</span> <span class="toc-text">MyBatis-Generate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis-Plus"><span class="toc-number">2.</span> <span class="toc-text">Mybatis-Plus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyBatis-PageHelper"><span class="toc-number">3.</span> <span class="toc-text">MyBatis-PageHelper</span></a></li></ol>
         
     </div>
     <style>
@@ -484,10 +493,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="Hide" title="Show or Hide Table of Contents">
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
 
     <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
     </script>
 
 
@@ -530,19 +539,19 @@
 
 <div class="scroll" id="post-nav-button">
         
-            <a href="/blog/2017/04/16/MVC/" title="Pre: 如何优雅的写一个Java MVC框架">
+            <a href="/blog/2017/04/16/javaHighConcurrencyOne/" title="上一篇: Java高并发秒杀系统API">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/MVC/">如何优雅的写一个Java MVC框架</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/MVC/">如何优雅的写一个Java MVC框架</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li></ul>
 
 
     <script>
@@ -564,7 +573,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style="display:none">
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -573,7 +582,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style="display:none">
-                        <span id="page-visit" title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -608,9 +617,9 @@ MathJax.Hub.Queue(function() {
 </script>
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide()" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

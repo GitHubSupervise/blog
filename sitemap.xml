@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/04/01/sshIntegration/</loc>
+    <loc>http://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
     
-    <lastmod>2017-06-02T16:26:30.247Z</lastmod>
+    <lastmod>2017-06-02T16:55:12.087Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/06/02/Intellij_IDEA_Integration_MyBatis/</loc>
+    <loc>http://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
     
-    <lastmod>2017-06-02T16:20:57.045Z</lastmod>
+    <lastmod>2017-06-02T16:50:35.699Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/2017/01/02/Awesome-java-cn/</loc>
+    
+    <lastmod>2017-06-02T16:33:55.776Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/2017/01/02/professional-programmer/</loc>
+    
+    <lastmod>2017-06-02T16:33:55.765Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/2017/04/01/sshIntegration/</loc>
+    
+    <lastmod>2017-06-02T16:26:30.247Z</lastmod>
     
   </url>
   
@@ -23,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/01/02/professional-programmer/</loc>
-    
-    <lastmod>2017-06-02T13:40:50.125Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://GitHubSupervise.io/blog/2017/04/16/javaHighConcurrencyOne/</loc>
     
     <lastmod>2017-06-02T13:40:50.109Z</lastmod>
@@ -37,23 +51,9 @@
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/01/02/Awesome-java-cn/</loc>
-    
-    <lastmod>2017-04-18T12:33:59.019Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://GitHubSupervise.io/blog/2017/02/16/Execution_of_work/</loc>
     
     <lastmod>2017-04-18T07:23:01.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
-    
-    <lastmod>2017-04-18T07:23:01.739Z</lastmod>
     
   </url>
   
