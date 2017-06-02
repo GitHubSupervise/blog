@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://GitHubSupervise.io/blog/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
-    <lastmod>2017-06-02T17:06:26.695Z</lastmod>
+    <lastmod>2017-06-02T17:54:39.707Z</lastmod>
     <data>
         <display>
         <title>Intellij IDEA 2017集成MyBatis三剑客</title>
@@ -32,20 +32,26 @@
 
     
   <url>
-    <loc>http://GitHubSupervise.io/blog/blog/2017/04/16/MVC/</loc>
-    <lastmod>2017-06-02T17:02:29.331Z</lastmod>
+    <loc>http://GitHubSupervise.io/blog/blog/2017/04/01/sshIntegration/</loc>
+    <lastmod>2017-06-02T17:48:58.939Z</lastmod>
     <data>
         <display>
-        <title>如何优雅的写一个Java MVC框架</title>
-        <pubTime>2017-04-15T20:05:27.000Z</pubTime>
+        <title>SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</title>
+        <pubTime>2017-03-31T21:40:27.000Z</pubTime>
         
-        <tag>java</tag>
+        <tag>Java</tag>
          
-        <tag>MVC</tag>
+        <tag>IOC</tag>
+         
+        <tag>AOP</tag>
          
         <tag>框架</tag>
          
-        <tag>优雅</tag>
+        <tag>Struts</tag>
+         
+        <tag>Spring</tag>
+         
+        <tag>Hibernate</tag>
          
          
            
@@ -142,38 +148,6 @@
         <tag>资源</tag>
          
         <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://GitHubSupervise.io/blog/blog/2017/04/01/sshIntegration/</loc>
-    <lastmod>2017-06-02T16:26:30.247Z</lastmod>
-    <data>
-        <display>
-        <title>SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</title>
-        <pubTime>2017-03-31T21:40:27.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>IOC</tag>
-         
-        <tag>AOP</tag>
-         
-        <tag>框架</tag>
-         
-        <tag>Struts</tag>
-         
-        <tag>Spring</tag>
-         
-        <tag>Hibernate</tag>
          
          
            
