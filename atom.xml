@@ -114,24 +114,26 @@
     <link href="http://GitHubSupervise.io/blog/2017/05/17/Precision/"/>
     <id>http://GitHubSupervise.io/blog/2017/05/17/Precision/</id>
     <published>2017-05-17T14:12:29.000Z</published>
-    <updated>2017-06-25T07:37:12.494Z</updated>
+    <updated>2017-06-25T08:15:51.708Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h2 id="问题描述及方案"><a href="#问题描述及方案" class="headerlink" title="问题描述及方案"></a>问题描述及方案</h2><ul>
-<li>假设我们在做电商项目，在进行计算时这个丢失精度在产品价格计算就会出现问题，很有可能造成我们手里有9.99元然后后面会有一堆9，但是呢这些钱无法购买一个10元的商品。<br>在某些编程语言中有专门处理货币的类型，但是Java没有，不过没关系我们可以通过<code>BigDecimal</code>来解决这个问题。</li>
+<li>假设我们在做电商项目，在进行计算时这个丢失精度在产品价格计算就会出现问题，很有可能造成我们手里有9.99元然后后面会有一堆9，但是呢这些钱无法购买一个10元的商品。   </li>
+<li>在某些编程语言中有专门处理货币的类型，但是Java没有，不过没关系我们可以通过<code>BigDecimal</code>来解决这个问题。</li>
 <li>下面我们来看几个例子。</li>
 </ul>
 <p><strong>testOne</strong><br><img src="http://oo31b5ljj.bkt.clouddn.com/Test1.png" alt="Test1">  </p>
 <ul>
-<li>这个呢就是Java本身对于浮点计算的时候会丢失精度，一定要注意，一定要注意，它所引起的事情呢基本没有小事，如果在线上订购量大的话，会引起大的故障，<br>可能会导致下不了订单或是对账出现问题</li>
+<li>这个呢就是Java本身对于浮点计算的时候会丢失精度，一定要注意，一定要注意，它所引起的事情呢基本没有小事，如果在线上订购量大的话，会引起大的故障，可能会导致下不了订单或是对账出现问题</li>
 </ul>
 <p><strong>testTwo</strong><br><img src="http://oo31b5ljj.bkt.clouddn.com/Test2.png" alt="Test2">  </p>
 <ul>
-<li>当使用BigDecimal后结果就更乱了，比test1结果还可怕又长又乱，它算出来的数比0.06是多的还是刚才那个意思，假设我们现在，<br>银行卡里面有0.06元然后我买的两个商品，分别是0.05元和0.01，当我下单的时候如果没有做处理那么他需要付的是0.06000000000000000298372437868010820238851010799407958984375<br>这就导致余额不够，订单无法下。这还没解决，不要紧，接着看  </li>
+<li>当使用BigDecimal后结果就更乱了，比test1结果还可怕又长又乱，它算出来的数比0.06是多的还是刚才那个意思，假设我们现在，银行卡里面有0.06元然后我买的两个商品，分别是0.05元和0.01，当我下单的时候如果没有做处理那么他需要付的是0.06000000000000000298372437868010820238851010799407958984375这就导致余额不够，订单无法下。这还没解决，不要紧，接着看  </li>
 </ul>
-<p><strong>testThree</strong><br><img src="http://oo31b5ljj.bkt.clouddn.com/Test3.png" alt="Test3">  </p>
+<p><strong>testThree</strong>  </p>
+<p><img src="http://oo31b5ljj.bkt.clouddn.com/Test3.png" alt="Test3">  </p>
 <ul>
-<li>用String的BigDecimal构造器，这个结果就是我们想要的，本身呢BigDecimal这个类型是用它来解决这个问题但是我们在选择用它的时候，一定一定一定<br>要选择它的Spring构造器一旦不用就像test2一样会发生严重过的精度问题，这个原则在《Effective Java》这本书中也有说，是说这个原则如果float和double只能用来做<br>科学计算或者工程计算，但是在商业计算中我们要用BigDecimal。</li>
+<li>用String的BigDecimal构造器，这个结果就是我们想要的，本身呢BigDecimal这个类型是用它来解决这个问题但是我们在选择用它的时候，一定一定一定要选择它的String构造器一旦不用就像test2一样会发生严重过的精度问题，这个原则在《Effective Java》这本书中也有说，是说这个原则如果float和double只能用来做科学计算或者工程计算，但是在商业计算中我们要用BigDecimal。</li>
 </ul>
 <h2 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h2><p><strong>1.说明</strong>  </p>
 <ul>
@@ -140,7 +142,7 @@
 </ul>
 <p><strong>2.用法</strong><br><img src="http://oo31b5ljj.bkt.clouddn.com/用法.png" alt="用法">  </p>
 <ul>
-<li>如果用这个构造器呢，把它转成String，用Double的toString(double)，里面放double然后用BigDecimal(String)这个String去构造，<br>也就是说如果要用的话，就把它转成String然后在选择用BigDecimal的String构造器去获得结果。另外3个这里就不讲了自己去看;</li>
+<li>如果用这个构造器呢，把它转成String，用Double的toString(double)，里面放double然后用BigDecimal(String)这个String去构造，也就是说如果要用的话，就把它转成String然后在选择用BigDecimal的String构造器去获得结果。另外3个这里就不讲了自己去看;</li>
 <li>为了方便我们可以把它写成一个util类，日后我整理完了会把它放在GitHub上。  </li>
 </ul>
 <iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>]]></content>
@@ -159,6 +161,8 @@
       <category term="数值" scheme="http://GitHubSupervise.io/blog/tags/%E6%95%B0%E5%80%BC/"/>
     
       <category term="精度" scheme="http://GitHubSupervise.io/blog/tags/%E7%B2%BE%E5%BA%A6/"/>
+    
+      <category term="电商" scheme="http://GitHubSupervise.io/blog/tags/%E7%94%B5%E5%95%86/"/>
     
   </entry>
   
