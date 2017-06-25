@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://GitHubSupervise.io/blog/2017/05/17/Precision/</loc>
+    
+    <lastmod>2017-06-25T07:37:12.494Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://GitHubSupervise.io/blog/2017/04/16/javaHighConcurrencyOne/</loc>
     
     <lastmod>2017-06-02T18:11:47.086Z</lastmod>
