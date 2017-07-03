@@ -9,33 +9,33 @@
       <content type="html"><![CDATA[<a id="more"></a>
 <blockquote>
 <p>当某台计算机开启了远程桌面连接功能后我们就可以在网络的另一端控制这台计算机了，通过远程桌面功能我们可以实时的操作这台计算机，在上面安装软件，运行 程序，所有的一切都好像是直接在该计算机上操作一样。这就是远程桌面的最大功能，通过该功能网络管理远程桌面连接员可以在家中安全的控制单位的服务器，而且由于该功能是系统内置的所以比其他第三方远程控制工具使用更方便更灵活。<br><code>注：家庭版的系统没有这个功能，要么换个版本的系统，要么下载一个安装即可。</code></p>
-<h2 id="一、内网远程桌面连接"><a href="#一、内网远程桌面连接" class="headerlink" title="一、内网远程桌面连接"></a>一、内网远程桌面连接</h2></blockquote>
+<h2 id="内网远程桌面连接"><a href="#内网远程桌面连接" class="headerlink" title="内网远程桌面连接"></a>内网远程桌面连接</h2></blockquote>
 <p><strong>1.为Windows创建新账户</strong></p>
 <ul>
 <li>这个用户只用于远程登录，而不是本地登录，且这个用户可以隐藏之，使其不出现在欢迎界面中。(不想创建的这一步可忽略)<br><code>注：远程桌面连接的用户一定要有密码</code><ul>
-<li>在【桌面】–&gt;【计算机】上右击，打开【管理】，然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E6%96%B0%E5%BB%BA.png" alt=""><br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E6%96%B0%E5%BB%BA2.png" alt=""></li>
+<li>在【桌面】 → 【计算机】上右击，打开【管理】，然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E6%96%B0%E5%BB%BA.png" alt=""><br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E6%96%B0%E5%BB%BA2.png" alt=""></li>
 </ul>
 </li>
 </ul>
 <p><strong>2.关闭防火墙与修改</strong></p>
 <ul>
-<li>在【控制面板】–&gt;【所有控制面板项】–&gt;【Windows 防火墙】–&gt;【启用或关闭Windows防火墙】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E9%98%B2%E7%81%AB%E5%A2%99.png" alt="关防火墙">   </li>
-<li>在【控制面板】–&gt;【所有控制面板项】–&gt;【Windows 防火墙】–&gt;【高级设置】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E9%98%B2%E7%81%AB%E5%A2%992.png" alt="修改"></li>
+<li>在【控制面板】 → 【所有控制面板项】 → 【Windows 防火墙】 → 【启用或关闭Windows防火墙】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E9%98%B2%E7%81%AB%E5%A2%99.png" alt="关防火墙">   </li>
+<li>在【控制面板】 → 【所有控制面板项】 → 【Windows 防火墙】 → 【高级设置】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E9%98%B2%E7%81%AB%E5%A2%992.png" alt="修改"></li>
 </ul>
 <p><strong>3打开远程桌面连接的默认端口3389</strong></p>
 <ul>
-<li>在【桌面】–&gt;【计算机】上右击，打开【属性】–&gt;【远程设置】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E5%BC%80%E5%90%AF%E7%AB%AF%E5%8F%A3.png" alt="开启端口"><br><code>注：最好把需要连接的用户的用户名添加进去</code></li>
+<li>在【桌面】 → 【计算机】上右击，打开【属性】 → 【远程设置】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E5%BC%80%E5%90%AF%E7%AB%AF%E5%8F%A3.png" alt="开启端口"><br><code>注：最好把需要连接的用户的用户名添加进去</code></li>
 </ul>
 <p><strong>4.关于安全，修改默认端口号</strong></p>
 <ul>
-<li>win键+R –&gt; 输入regedit –&gt; 进入注册表,找到以下两个分支选项：<br>_HKEY_LOCAL<em>MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp</em><br>_HKEY_LOCAL<em>MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</em><br>其下都有一个<code>PortNumber</code>值，一般默认为3389。选中<code>PortNumber</code>单击右键，修改，这时注意点“十进制”的选钮再输入你的端口，如20(可自己指定端口，但最好不要设为一些你已经设置好的端口，以免冲突)然后确定。最后重新启动一下。<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3%E5%8F%B7.png" alt="修改端口号"></li>
+<li>win键+R → 输入regedit → 进入注册表,找到以下两个分支选项：<br><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp_</code><br><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</code><br>其下都有一个<code>PortNumber</code>值，一般默认为3389。选中<code>PortNumber</code>单击右键，修改，这时注意点“十进制”的选钮再输入你的端口，如20(可自己指定端口，但最好不要设为一些你已经设置好的端口，以免冲突)然后确定。最后重新启动一下。<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3%E5%8F%B7.png" alt="修改端口号"></li>
 </ul>
 <p><strong>5.内网测试远程桌面</strong></p>
 <ul>
-<li>在【开始】–&gt;【Windows附件】–&gt;【远程桌面连接】–&gt;【显示选项】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E7%BD%91%E8%BF%9E%E6%8E%A5.png" alt="内网连接">  </li>
+<li>在【开始】 → 【Windows附件】 → 【远程桌面连接】 → 【显示选项】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E7%BD%91%E8%BF%9E%E6%8E%A5.png" alt="内网连接">  </li>
 </ul>
 <p><strong>最后一步输入密码正确能登陆进去后就可以进行外网连接了</strong><code>注：出现证书错误问题可无视</code></p>
-<h2 id="二、外网远程桌面连接内网服务器"><a href="#二、外网远程桌面连接内网服务器" class="headerlink" title="二、外网远程桌面连接内网服务器"></a>二、外网远程桌面连接内网服务器</h2><p><strong>1.路由器端口映射设置</strong></p>
+<h2 id="外网远程桌面连接内网服务器"><a href="#外网远程桌面连接内网服务器" class="headerlink" title="外网远程桌面连接内网服务器"></a>外网远程桌面连接内网服务器</h2><p><strong>1.路由器端口映射设置</strong></p>
 <ul>
 <li>在浏览器地址栏输入<code>192.168.1.1</code>或<code>192.168.0.1</code>登陆路由器的管理页面，在“虚拟服务器”中添加一条：端口号为3389，然后填入需要登录的内网IP地址（如192.168.2.220），选中“启用”，再“保存”即可。在外网PC上，在“远程桌面连接”的对话框中输入内网PC的公网IP地址，然后连接即可。</li>
 <li>根据路由器的发展现在有三个版本的界面分别为：传统界面、新界面、云路由器界面，各的对应的设置方法有所差异，点击以下超链接即可到对应的设置引导。  </li>
@@ -77,9 +77,9 @@
 <li>服务器没有开启3389端口(系统属性里“远程”页面里的“远程桌面”未打勾或没有使用有远程登陆权限的用户即可)</li>
 <li>terminal services 服务未启动，启动此服务即可,另外还有两个RDP服务也别忘记哦</li>
 <li>检查远程桌面是不是被更改了端口，步骤：打开“开始→运行”，输入“regedit”，打开注册表，进入以下路径：<code>HKEY_LOCAL_MACHINE\SYSTEM\
-CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp</code>，看见PortNamber值了吗?其默认值是3389如果不对请改回来。</li>
+CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp</code>，看见PortNamber值了吗?其默认值是3389如果不对请改回来。  </li>
 </ol>
-<p><strong>以上就是远程桌面连接不上的具体解决方法，如果尝试了以上方法还是未能解决，可以借助第三方远程控制或远程协助软件进行，或者重装</strong></p>
+<p><a href="http://www.w10zj.com/Win10xy/Win10xf_4716.html" target="_blank" rel="external">win10由于远程桌面服务当前正忙 因此无法完成 的解决方法！</a><br><a href="http://blog.csdn.net/gaokao2011/article/details/50927031" target="_blank" rel="external">Win7&amp;win10无法远程的最佳解决方法</a><br><strong>以上就是远程桌面连接不上的具体解决方法，如果尝试了以上方法还是未能解决，可以借助第三方远程控制或远程协助软件进行，或者重装</strong></p>
 <iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>]]></content>
       
         <categories>
