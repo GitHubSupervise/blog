@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://GitHubSupervise.io/blog/"/>
-  <updated>2017-06-02T17:54:39.707Z</updated>
+  <updated>2017-07-03T19:34:44.935Z</updated>
   <id>http://GitHubSupervise.io/blog/</id>
   
   <author>
@@ -14,6 +14,108 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>外网远程桌面连接内网服务器教程(超详细)</title>
+    <link href="http://GitHubSupervise.io/blog/2017/07/03/Connect%20the%20inner%20and%20outer%20net/"/>
+    <id>http://GitHubSupervise.io/blog/2017/07/03/Connect the inner and outer net/</id>
+    <published>2017-07-03T14:21:20.000Z</published>
+    <updated>2017-07-03T19:34:44.935Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<blockquote>
+<p>当某台计算机开启了远程桌面连接功能后我们就可以在网络的另一端控制这台计算机了，通过远程桌面功能我们可以实时的操作这台计算机，在上面安装软件，运行 程序，所有的一切都好像是直接在该计算机上操作一样。这就是远程桌面的最大功能，通过该功能网络管理远程桌面连接员可以在家中安全的控制单位的服务器，而且由于该功能是系统内置的所以比其他第三方远程控制工具使用更方便更灵活。<br><code>注：家庭版的系统没有这个功能，要么换个版本的系统，要么下载一个安装即可。</code></p>
+<h2 id="一、内网远程桌面连接"><a href="#一、内网远程桌面连接" class="headerlink" title="一、内网远程桌面连接"></a>一、内网远程桌面连接</h2></blockquote>
+<p><strong>1.为Windows创建新账户</strong></p>
+<ul>
+<li>这个用户只用于远程登录，而不是本地登录，且这个用户可以隐藏之，使其不出现在欢迎界面中。(不想创建的这一步可忽略)<br><code>注：远程桌面连接的用户一定要有密码</code><ul>
+<li>在【桌面】–&gt;【计算机】上右击，打开【管理】，然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E6%96%B0%E5%BB%BA.png" alt=""><br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E6%96%B0%E5%BB%BA2.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<p><strong>2.关闭防火墙与修改</strong></p>
+<ul>
+<li>在【控制面板】–&gt;【所有控制面板项】–&gt;【Windows 防火墙】–&gt;【启用或关闭Windows防火墙】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E9%98%B2%E7%81%AB%E5%A2%99.png" alt="关防火墙">   </li>
+<li>在【控制面板】–&gt;【所有控制面板项】–&gt;【Windows 防火墙】–&gt;【高级设置】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E9%98%B2%E7%81%AB%E5%A2%992.png" alt="修改"></li>
+</ul>
+<p><strong>3打开远程桌面连接的默认端口3389</strong></p>
+<ul>
+<li>在【桌面】–&gt;【计算机】上右击，打开【属性】–&gt;【远程设置】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E5%BC%80%E5%90%AF%E7%AB%AF%E5%8F%A3.png" alt="开启端口"><br><code>注：最好把需要连接的用户的用户名添加进去</code></li>
+</ul>
+<p><strong>4.关于安全，修改默认端口号</strong></p>
+<ul>
+<li>win键+R –&gt; 输入regedit –&gt; 进入注册表,找到以下两个分支选项：<br>_HKEY_LOCAL<em>MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp</em><br>_HKEY_LOCAL<em>MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</em><br>其下都有一个<code>PortNumber</code>值，一般默认为3389。选中<code>PortNumber</code>单击右键，修改，这时注意点“十进制”的选钮再输入你的端口，如20(可自己指定端口，但最好不要设为一些你已经设置好的端口，以免冲突)然后确定。最后重新启动一下。<br><img src="http://oo31b5ljj.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%87%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3%E5%8F%B7.png" alt="修改端口号"></li>
+</ul>
+<p><strong>5.内网测试远程桌面</strong></p>
+<ul>
+<li>在【开始】–&gt;【Windows附件】–&gt;【远程桌面连接】–&gt;【显示选项】,然后看下图：<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E7%BD%91%E8%BF%9E%E6%8E%A5.png" alt="内网连接">  </li>
+</ul>
+<p><strong>最后一步输入密码正确能登陆进去后就可以进行外网连接了</strong><code>注：出现证书错误问题可无视</code></p>
+<h2 id="二、外网远程桌面连接内网服务器"><a href="#二、外网远程桌面连接内网服务器" class="headerlink" title="二、外网远程桌面连接内网服务器"></a>二、外网远程桌面连接内网服务器</h2><p><strong>1.路由器端口映射设置</strong></p>
+<ul>
+<li>在浏览器地址栏输入<code>192.168.1.1</code>或<code>192.168.0.1</code>登陆路由器的管理页面，在“虚拟服务器”中添加一条：端口号为3389，然后填入需要登录的内网IP地址（如192.168.2.220），选中“启用”，再“保存”即可。在外网PC上，在“远程桌面连接”的对话框中输入内网PC的公网IP地址，然后连接即可。</li>
+<li>根据路由器的发展现在有三个版本的界面分别为：传统界面、新界面、云路由器界面，各的对应的设置方法有所差异，点击以下超链接即可到对应的设置引导。  </li>
+</ul>
+<p><a href="http://service.tp-link.com.cn/detail_article_3732.html" target="_blank" rel="external">传统界面</a><br><a href="http://service.tp-link.com.cn/detail_article_2834.html" target="_blank" rel="external">新界面</a><br><a href="http://service.tp-link.com.cn/detail_article_2441.html" target="_blank" rel="external">云路由器界面</a>  </p>
+<h2 id="远程桌面无法连接的问题原因分析及解决"><a href="#远程桌面无法连接的问题原因分析及解决" class="headerlink" title="远程桌面无法连接的问题原因分析及解决"></a>远程桌面无法连接的问题原因分析及解决</h2><ul>
+<li>如果有一天出现的提示如下：<br><img src="http://oo31b5ljj.bkt.clouddn.com/3380865_1.jpg" alt="错误">  </li>
+</ul>
+<p><strong>1、中断远程桌面连接客户端无法建立跟远程计算机的连接。</strong></p>
+<ul>
+<li><p>远程桌面连接不上的可能的原因是:</p>
+<ol>
+<li>远程计算机上的远程连接可能没有启用。</li>
+<li>已超出远程计算机上的连接最大数。</li>
+<li>建立连接时出现了一个网络错误</li>
+</ol>
+</li>
+<li><p>具体的解决办法：</p>
+<ul>
+<li>有时候是这个错误提示：由于网络错误，连接被中断，请重新连接到远程计算机;远程连接我肯定是开启了的，防火墙里面3389端口也是打开的，并且连接其他 的服务器就可以连接上，说明我本机没问题，用扫描软件，扫描了一下这个服务器，显示IP和端口都是存在的，说明这个服务器网络也没问题，实在没办法，只有 不断的测试，后来在系统日志里面看到很多条系统错误信息。其中：严重错误“RDP 协议组件 “DATA ENCRYPTION” 在协议流中发现一个错误并且中断了客户端连接。”几经周折得知这是因为Certificate子键负责终端服务通信中数据信息的认证和加密，它一旦被损坏，终端服务的协议组件就会检测到错误，中断客户机与终端服务器之间的通信。导致Certificate子键损坏的原因很多，如管理员安装和卸载某些系统软件、对终端服务参数的不合理配置等。这时我们需要重置该键值中的内容，才能修复终端服务。<br>进入注册表编辑器窗口，展开<code>HKEY_LOCAL_MA CHINE\ SYSTEM\CurrentCon trolSet\Services\TermService\ Parame ters</code>，找到名为 “Cer tificate”的子键，将它删除，重新启动XP系统或Windows 2000 Server服务器，系统就会重新生成 “Certificate”子键，这样客户端就能正常连接到终端服务器了。在终端服务器出现无法连接的问题后，我们首先要判断这是不是网络故障引起的，检测远程客户端和XP系统(Windows 2000 Server服务器)是否能够正常连接到网络;然后就要检查终端服务器的加密级别是否设置过高。排除上述原因后，就有可能是“Certificate”子键损坏了。此外，<code>HKEY_LOCAL _MACHINE\ SYSTEM\Cur rentControlSet\Services\Term Service\Parameters</code>下的 “X509 Certificate”和“X509 Certificate ID”损坏了也有可能导致终端服务出现问题，它们的修复方法与“Certificate”子键损坏后的修复方法相同。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2、提示“本地计算机客户端访问许可不能升级或更新”的解决方法</strong></p>
+<ol>
+<li>打开被控机的注册表编辑器，定位到<code>HKLM\SOFTWARE\Microsoft\MSLicensing</code>。</li>
+<li>备份MSLicensing键。</li>
+<li>删除MSLicensing键，重启系统。</li>
+</ol>
+<p><strong>3、提示“远程计算机已结束连接”</strong></p>
+<ol>
+<li>打开被控机的注册表编辑器，定位到<code>HKLM\SYSTEM\ControlSet001\Enum\Root\RDPDR</code>，备份该项;右键单击该项，选择“权限”，为当前登录的用户增添“完全控制”的权限。</li>
+<li>新建key文件，将以下内容写入，双击导入注册表后重启计算机即可。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">　　Windows Registry Editor Version 5.00</div><div class="line"></div><div class="line">　　[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Enum\Root\RDPDR\0000]</div><div class="line"></div><div class="line">　　“ClassGUID”=”&#123;4D36E97D-E325-11CE-BFC1-08002BE10318&#125;”</div><div class="line"></div><div class="line">　　“Class”=”System”</div><div class="line"></div><div class="line">　　“HardwareID”=hex(7):52,00,4f,00,4f,00,54,00,5c,00,52,00,44,00,50,00,44,00,52,\</div><div class="line"></div><div class="line">　　00,00,00,00,00</div><div class="line"></div><div class="line">　　“Driver”=”&#123;4D36E97D-E325-11CE-BFC1-08002BE10318&#125;\\0030″</div><div class="line"></div><div class="line">　　“Mfg”=”(标准系统设备)”</div><div class="line"></div><div class="line">　　“Service”=”rdpdr”</div><div class="line"></div><div class="line">　　“DeviceDesc”=”终端服务器设备重定向器”</div><div class="line"></div><div class="line">　　“ConfigFlags”=dword:00000000</div><div class="line"></div><div class="line">　　“Capabilities”=dword:00000000</div></pre></td></tr></table></figure>
+<p><strong>4、提示“客户端无法连接到远程计算机”。</strong></p>
+<ol>
+<li>远程计算机不可到达(ping不通或者被防火墙拦截)</li>
+<li>服务器没有开启3389端口(系统属性里“远程”页面里的“远程桌面”未打勾或没有使用有远程登陆权限的用户即可)</li>
+<li>terminal services 服务未启动，启动此服务即可,另外还有两个RDP服务也别忘记哦</li>
+<li>检查远程桌面是不是被更改了端口，步骤：打开“开始→运行”，输入“regedit”，打开注册表，进入以下路径：<code>HKEY_LOCAL_MACHINE\SYSTEM\
+CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp</code>，看见PortNamber值了吗?其默认值是3389如果不对请改回来。</li>
+</ol>
+<p><strong>以上就是远程桌面连接不上的具体解决方法，如果尝试了以上方法还是未能解决，可以借助第三方远程控制或远程协助软件进行，或者重装</strong></p>
+<iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      本文给大家介绍外网远程桌面连接内网服务器的方法、注意事项、错误解决办法
+    
+    </summary>
+    
+      <category term="连接" scheme="http://GitHubSupervise.io/blog/categories/%E8%BF%9E%E6%8E%A5/"/>
+    
+    
+      <category term="外网" scheme="http://GitHubSupervise.io/blog/tags/%E5%A4%96%E7%BD%91/"/>
+    
+      <category term="内网" scheme="http://GitHubSupervise.io/blog/tags/%E5%86%85%E7%BD%91/"/>
+    
+      <category term="远程桌面" scheme="http://GitHubSupervise.io/blog/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/"/>
+    
+      <category term="服务器" scheme="http://GitHubSupervise.io/blog/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Intellij IDEA 2017集成MyBatis三剑客</title>
