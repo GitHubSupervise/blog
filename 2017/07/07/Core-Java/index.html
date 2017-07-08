@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/%E5%B8%B8%E9%87%8F%E6%B1%A0.jpg">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E5%AD%98%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA.png">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/String%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-07-08T06:50:01.415Z">
+<meta property="og:updated_time" content="2017-07-08T07:10:02.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入Java核心">
 <meta name="twitter:description" content="本文分享一些自己对Java类加载、内存分配、Class对象以及反射的理解">
@@ -175,11 +175,11 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -334,7 +334,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me">
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
       <div class="body-wrap"><article id="post-Core-Java" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -374,16 +374,24 @@
 <p>类加载负责加载编译后的class文件（字节码文件）到JVM当中。</p>
 </blockquote>
 <ul>
-<li>在JRE中，类加载器主要分为以下几种：<br>1)引导类加载器（Bootstrap）<ul>
-<li>它本身使用C/C++语言实现的，负责加载Java的核心类库，在jre\lib目录中，当中包括如rt.jar，这些都是Java自带的核心类库，必须由它来完成加载。<br>2)拓展/扩展类加载器（Extension）</li>
-<li>这个加载器就是由Java语言实现，负责加载jre\lib\ext目录下的类库，这个目录下的类库都是一些扩展类。<br>3)应用程序/系统类加载器（Application）</li>
+<li>在JRE中，类加载器主要分为以下几种： <ul>
+<li>引导类加载器（Bootstrap）<ul>
+<li>它本身使用C/C++语言实现的，负责加载Java的核心类库，在jre\lib目录中，当中包括如rt.jar，这些都是Java自带的核心类库，必须由它来完成加载。    </li>
+</ul>
+</li>
+<li>拓展/扩展类加载器（Extension）<ul>
+<li>这个加载器就是由Java语言实现，负责加载jre\lib\ext目录下的类库，这个目录下的类库都是一些扩展类。  </li>
+</ul>
+</li>
+<li>应用程序/系统类加载器（Application）<ul>
 <li>这个类加载器同样使用Java语言实现，它主要负责加载classpath下面的所有类库，通常我们编写的Java类都是由这个类加载器完成加载。 </li>
 </ul>
 </li>
-<li><p>三个类加载器的初始化过程：当程序运行时，首先会初始化引导类加载器，它就负责创建和初始化扩展类加载器，当扩展类加载器完成初始化之后，又负责创建和初始化系统类加载器。 </p>
+</ul>
 </li>
-<li><p>这些类加载器协同起来完成整个类加载的过程，因此这些类加载器的加载模式是基于“双亲委托模型”。<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E6%9C%BA%E5%88%B6.png" alt="双亲委托模型"></p>
-</li>
+<li>三个类加载器的初始化过程：当程序运行时，首先会初始化引导类加载器，它就负责创建和初始化扩展类加载器，当扩展类加载器完成初始化之后，又负责创建和初始化系统类加载器。</li>
+<li>这些类加载器协同起来完成整个类加载的过程，因此这些类加载器的加载模式是基于“双亲委托模型”。</li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E6%9C%BA%E5%88%B6.png" alt="双亲委托模型"></li>
 </ul>
 <h3 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h3><ul>
 <li><p>当我们编写一个Java类时，首先负责加载这个类的加载器是系统类加载器，但是它不会立马就去执行加载，而是先把这个任务交给父加载器（扩展类加载器），而扩展类加载器同样也会将这个任务交给父加载器（引导类加载器），最终当引导类加载器不能去加载这个类的时候（也就是在自己加载职责范围找不到的时候），又会将这个任务交回给子加载器。以此类推，最终我们编写的类都会配置在classpath环境中，所以，这个类的加载任务还是回到系统类加载器来完成。</p>
@@ -396,26 +404,47 @@
 <p>当JVM运行起来的时候就会给内存划分空间，那么这块空间称之为运行时数据区。<br>  (<code>备注：</code>当一个Java源程序编译成class字节码文件之后，字节码文件里存放的都是二进制的汇编命令，当程序运行的时候，JVM会将这个二进制的命令逐行解释，交给CPU去执行)</p>
 </blockquote>
 <ul>
-<li>运行时数据区将划分为以下几块内容：<br>1)栈  <ul>
-<li>每一个线程运行起来的时候就会对应一个栈（线程栈），栈当中存放的数据是被当前线程所独有的。而栈当中存放的是栈帧，当线程调用一个方法的时候，就会形成一个栈帧，并将这个栈帧进行压栈操作，当方法执行完之后就会将这个栈帧进行出栈操作。这个栈帧里面包括（局部变量、操作数栈、指向当前方法对应类的常量池引用、方法的返回地址等信息）。<br>(<code>备注：</code>由于局部变量都是存放在栈中，而每一个线程都对应自己的线程栈，因此局部变量是线程安全的，不会才产生资源共享的情况。)<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E9%80%92%E5%BD%92%E6%A0%88.png" alt="递归栈"><br>2)本地方法栈  </li>
-<li>本地方法栈的机制和栈的机制类似，区别在于，栈是运行Java所实现的方法，而本地方法栈是运行的本地方法(Native Method)。所谓的本地方法指的是在本地jvm中需要调用非Java语言所实现的方法，例如c语言。在JVM的规范中，其实没有强制性要求实现方一定要划分出本地方法栈的和具体的实现，这一部分可以根据实现方具体要求来实现。因此在HotSport虚拟机的实现中就将方法栈和本地方法栈二合为一。<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%881.png" alt="本地方法栈"><br>3)程序计数器  </li>
-<li>程序计数器也可以称之为PC寄存器。它主要用于存放当前程序下一条将要执行的指令地址。CPU会根据这个地址找到对应的指令来执行。通俗的讲就是指令缓存。这个寄存器是有JVM内部实现的，并不是物理概念上的寄存器，但是JVM在实现功能的逻辑上是相同的。<br>4)堆</li>
+<li><p>运行时数据区将划分为以下几块内容：  </p>
+<ul>
+<li>栈  <ul>
+<li>每一个线程运行起来的时候就会对应一个栈（线程栈），栈当中存放的数据是被当前线程所独有的。而栈当中存放的是栈帧，当线程调用一个方法的时候，就会形成一个栈帧，并将这个栈帧进行压栈操作，当方法执行完之后就会将这个栈帧进行出栈操作。这个栈帧里面包括（局部变量、操作数栈、指向当前方法对应类的常量池引用、方法的返回地址等信息）。<br>(<code>备注：</code>由于局部变量都是存放在栈中，而每一个线程都对应自己的线程栈，因此局部变量是线程安全的，不会才产生资源共享的情况。)  </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E9%80%92%E5%BD%92%E6%A0%88.png" alt="递归栈">        </li>
+</ul>
+</li>
+<li>本地方法栈<ul>
+<li>本地方法栈的机制和栈的机制类似，区别在于，栈是运行Java所实现的方法，而本地方法栈是运行的本地方法(Native Method)。所谓的本地方法指的是在本地jvm中需要调用非Java语言所实现的方法，例如c语言。在JVM的规范中，其实没有强制性要求实现方一定要划分出本地方法栈的和具体的实现，这一部分可以根据实现方具体要求来实现。因此在HotSport虚拟机的实现中就将方法栈和本地方法栈二合为一。    </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%881.png" alt="本地方法栈">    </li>
+</ul>
+</li>
+<li>程序计数器  <ul>
+<li>程序计数器也可以称之为PC寄存器。它主要用于存放当前程序下一条将要执行的指令地址。CPU会根据这个地址找到对应的指令来执行。通俗的讲就是指令缓存。这个寄存器是有JVM内部实现的，并不是物理概念上的寄存器，但是JVM在实现功能的逻辑上是相同的。   </li>
+</ul>
+</li>
+<li>堆<ul>
 <li>堆内存中主要存放创建的对象以及数组。 堆内存是可以被多个线程所共享的一块区域,因此多个线程栈都可以去访问同一块堆的内存区域。堆里面的每一对象都存放了该实例的实例变量。  </li>
 <li>当在方法中定义了一个局部变量，如果这个变量是基本数据类型，那么这个变量的值就直接存放在栈中，如果这个变量是引用数据类型，那么这个对象变量就存放在堆内存中，而栈中存放的是一个指向堆内存中这个对象的首地址。<br>(<code>备注：</code>Java中除了8个基本数据类型以外的所有类型都是引用数据类型)  </li>
-</ul>
-</li>
-<li>引用<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BC%95%E7%94%A8.png" alt="引用"></li>
-<li>更改<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%AF%B9%E8%B1%A1%E6%9B%B4%E6%94%B9.png" alt="更改"></li>
-<li>数组<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E6%95%B0%E7%BB%84.png" alt="数组"></li>
-<li>循环<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BE%AA%E7%8E%AF.png" alt="循环"></li>
+<li>引用    </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BC%95%E7%94%A8.png" alt="引用"></li>
+<li>更改  </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%AF%B9%E8%B1%A1%E6%9B%B4%E6%94%B9.png" alt="更改"></li>
+<li>数组  </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E6%95%B0%E7%BB%84.png" alt="数组"></li>
+<li>循环  </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BE%AA%E7%8E%AF.png" alt="循环"></li>
 <li>实例变量和静态变量的区别：  <ul>
 <li><code>实例变量：</code>实例变量是随着对象的创建而创建，而实例是存放在堆中，所以实例变量自然也就跟实例一并保存在堆内存。只要创建多少个实例，就会有多少份实例变量。当实例被回收的时候，实例变量也随之而销毁。</li>
-<li><code>静态变量：</code>静态变量也叫类变量，它是在类加载的时候就已经初始化好，并存放在方法区，并且只有一份，所以它是被多个实例所共享的一个变量。<br>5)方法区  </li>
-<li>方法区在JVM中也是一个非常重要的一块内存区域，它和堆一样，是可以被多个线程所共享的一块区域。这个区域中主要存放了每一个加载的class文件信息。<br>在一个class文件中主要包含<code>魔数</code>(代码中出现但没有解释的数字常量或字符串)（用来确定是否是一个class文件）、常量池（常量池在下面会有完整说明）、访问标志（当前的class是类还是接口，是否是抽象类，<br>是否是public修饰，是否使用了<code>final</code>修饰等描述信息…）、字段表集合信息（使用什么访问修饰符、是实例变量还是静态变量，是否用<code>final</code>修饰等描述信息…）、<br>方法表集合信息（访问修饰符，是否静态方法，是否用final修饰，是否用了<code>synchronized</code>修饰，是否是<code>native</code>方法…）等内容。当一个类加载器加载一个class文件的时候，<br>会根据这个class文件的内容创建一个Class对象，而这个Class对象就包括了上述的这些内容。后续要创建这个类的所有实例，都是通过这个Class对象创建出来的。<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E6%96%B9%E6%B3%95%E5%8C%BA.png" alt="方法区"></li>
+<li><code>静态变量：</code>静态变量也叫类变量，它是在类加载的时候就已经初始化好，并存放在方法区，并且只有一份，所以它是被多个实例所共享的一个变量。   </li>
 </ul>
 </li>
 </ul>
-<p>6)常量池</p>
+</li>
+<li><p>方法区  </p>
+<ul>
+<li>方法区在JVM中也是一个非常重要的一块内存区域，它和堆一样，是可以被多个线程所共享的一块区域。这个区域中主要存放了每一个加载的class文件信息。<br>在一个class文件中主要包含<code>魔数</code>(代码中出现但没有解释的数字常量或字符串)（用来确定是否是一个class文件）、常量池（常量池在下面会有完整说明）、访问标志（当前的class是类还是接口，是否是抽象类，<br>是否是public修饰，是否使用了<code>final</code>修饰等描述信息…）、字段表集合信息（使用什么访问修饰符、是实例变量还是静态变量，是否用<code>final</code>修饰等描述信息…）、<br>方法表集合信息（访问修饰符，是否静态方法，是否用final修饰，是否用了<code>synchronized</code>修饰，是否是<code>native</code>方法…）等内容。当一个类加载器加载一个class文件的时候，<br>会根据这个class文件的内容创建一个Class对象，而这个Class对象就包括了上述的这些内容。后续要创建这个类的所有实例，都是通过这个Class对象创建出来的。  </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E6%96%B9%E6%B3%95%E5%8C%BA.png" alt="方法区"></li>
+</ul>
+</li>
+<li><p>常量池</p>
 <ul>
 <li>常量池也是方法区中的一部分，它存放的内容是class文件中最重要的资源，JVM为每一个class对象都维护一个常量池。它主要存储两种类型的常量。  <ol>
 <li>字面常量  <ul>
@@ -428,18 +457,22 @@
 </li>
 </ol>
 </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%B8%B8%E9%87%8F%E6%B1%A0.jpg" alt="常量池">   </li>
 </ul>
-<p><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%B8%B8%E9%87%8F%E6%B1%A0.jpg" alt="常量池">   </p>
-<ul>
+</li>
+</ul>
+</li>
 <li>在Java当中，8个基本数据类型都有对应的包装类型，而大部分包装类型都实现了常量池的技术，除了<code>Double</code>和<code>Float</code>类。<br>(<code>备注说明：</code>在JDK8之后，方法区已经取消，方法区被一个叫MetaSpace，它和堆合并到一起管理)  </li>
-<li>内存运行时数据区<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E5%AD%98%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA.png" alt="内存运行时数据区"></li>
+<li>内存运行时数据区  </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E5%AD%98%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA.png" alt="内存运行时数据区"></li>
 <li><code>扯了好多Java虚拟机的内容，也没讲多深，因为这里主要的目的是为了大家方便理解Java反射机制，下面正式进入正题</code></li>
 </ul>
 <h2 id="Class对象"><a href="#Class对象" class="headerlink" title="Class对象"></a>Class对象</h2><blockquote>
 <p>当ClassLoader加载一个class文件到JVM的时候，会自动创建一个该类的Class对象，并且这个对象是唯一的，后续要创建这个类的任何实例，都会根据这个Class对象来创建。因此每当加载一个class文件的时候，都会创建一个与之对应的Class对象。</p>
 </blockquote>
 <ul>
-<li>解析一个类的各个部分，形成一个对象。<br><img src="http://oo31b5ljj.bkt.clouddn.com/String%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="String类加载示意图"></li>
+<li>解析一个类的各个部分，形成一个对象。  </li>
+<li><img src="http://oo31b5ljj.bkt.clouddn.com/String%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="String类加载示意图"></li>
 <li><p>外存中的类，加载到内存中，会形成该对象的Class类，例如：String类，加载到内存中，就是StringClass对象。<br>也就是说类是java.lang.Class类的实例对象，而Class是所有类的类<br>对于普通的对象，一般都的创建方式：  </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String s = <span class="keyword">new</span> String();</div></pre></td></tr></table></figure>
 </li>
@@ -495,7 +528,7 @@
 </ul>
 <h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
 <li>通用的应用程序</li>
-<li>框架比如：<br>　　1.Spring 的 Ioc/Di<br>　　2.SpringMVC 监控 Controller中的注解<br>　　3.MyBatis 利用反射获取和设置对象值<br>　　4.Struts2 的 FormBean 和页面之间…<br>　　5.Hibernate的 find(Class clazz)<br>　　6.JavaBean和JSP之间调用<br>　　7.JDBC 的 classForName()  </li>
+<li>框架比如：<br>　　　1.Spring 的 Ioc/Di<br>　　　2.SpringMVC 监控 Controller中的注解<br>　　　3.MyBatis 利用反射获取和设置对象值<br>　　　4.Struts2 的 FormBean 和页面之间…<br>　　　5.Hibernate的 find(Class clazz)<br>　　　6.JavaBean和JSP之间调用<br>　　　7.JDBC 的 classForName()  </li>
 </ul>
 <p><del>I was within and without.</del></p>
 <p><iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>  </p>
@@ -506,17 +539,17 @@
   </div>
   
     <div class="copyright">
-        <p><span>Title:</span><a href="/blog/2017/07/07/Core-Java/">深入Java核心</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">Dr.Lester</a></p>
-        <p><span>Created:</span>2017-07-07, 23:50:39</p>
-        <p><span>Updated:</span>2017-07-08, 14:50:01</p>
+        <p><span>本文标题:</span><a href="/blog/2017/07/07/Core-Java/">深入Java核心</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Dr.Lester</a></p>
+        <p><span>发布时间:</span>2017-07-07, 23:50:39</p>
+        <p><span>最后更新:</span>2017-07-08, 15:10:02</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/blog/2017/07/07/Core-Java/" title="深入Java核心">http://GitHubSupervise.io/blog/2017/07/07/Core-Java/</a>
-            <span class="copy-path" data-clipboard-text="From http://GitHubSupervise.io/blog/2017/07/07/Core-Java/　　By Dr.Lester" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/blog/2017/07/07/Core-Java/" title="深入Java核心">http://GitHubSupervise.io/blog/2017/07/07/Core-Java/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://GitHubSupervise.io/blog/2017/07/07/Core-Java/　　作者: Dr.Lester" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -537,7 +570,7 @@
 
 </article>
 <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
+        <strong class="toc-title">文章目录</strong>
         
             <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#类加载"><span class="toc-number">1.</span> <span class="toc-text">类加载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#举例说明"><span class="toc-number">1.1.</span> <span class="toc-text">举例说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内存分配"><span class="toc-number">2.</span> <span class="toc-text">内存分配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class对象"><span class="toc-number">3.</span> <span class="toc-text">Class对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反射"><span class="toc-number">4.</span> <span class="toc-text">反射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#反射机制的利与弊"><span class="toc-number">4.1.</span> <span class="toc-text">反射机制的利与弊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反射机制的相关操作"><span class="toc-number">4.2.</span> <span class="toc-text">反射机制的相关操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建实例"><span class="toc-number">4.2.1.</span> <span class="toc-text">创建实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态操作属性"><span class="toc-number">4.2.2.</span> <span class="toc-text">动态操作属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态操作方法"><span class="toc-number">4.2.3.</span> <span class="toc-text">动态操作方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态操作构造方法"><span class="toc-number">4.2.4.</span> <span class="toc-text">动态操作构造方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Class中的一些API"><span class="toc-number">4.2.5.</span> <span class="toc-text">Class中的一些API</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过反射了解集合泛型的本质"><span class="toc-number">4.3.</span> <span class="toc-text">通过反射了解集合泛型的本质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用场景"><span class="toc-number">4.4.</span> <span class="toc-text">使用场景</span></a></li></ol></li></ol>
         
@@ -553,10 +586,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="Hide" title="Show or Hide Table of Contents">
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
 
     <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
     </script>
 
 
@@ -599,19 +632,19 @@
 
 <div class="scroll" id="post-nav-button">
         
-            <a href="/blog/2017/07/03/Connect the inner and outer net/" title="Pre: 外网远程桌面连接内网服务器教程(超详细)">
+            <a href="/blog/2017/07/03/Connect the inner and outer net/" title="上一篇: 外网远程桌面连接内网服务器教程(超详细)">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/07/Core-Java/">深入Java核心</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/03/Connect the inner and outer net/">外网远程桌面连接内网服务器教程(超详细)</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/05/17/Precision/">Java数值避免浮点型计算丢失精度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/07/Core-Java/">深入Java核心</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/03/Connect the inner and outer net/">外网远程桌面连接内网服务器教程(超详细)</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/05/17/Precision/">Java数值避免浮点型计算丢失精度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li></ul>
 
 
     <script>
@@ -633,7 +666,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style="display:none">
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -642,7 +675,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style="display:none">
-                        <span id="page-visit" title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -677,9 +710,9 @@ MathJax.Hub.Queue(function() {
 </script>
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide()" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
