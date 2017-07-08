@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/%E5%B8%B8%E9%87%8F%E6%B1%A0.jpg">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E5%AD%98%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA.png">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/String%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-07-08T06:13:21.210Z">
+<meta property="og:updated_time" content="2017-07-08T06:18:00.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入Java核心">
 <meta name="twitter:description" content="本文分享一些自己对Java类加载、内存分配、Class对象以及反射的理解">
@@ -418,18 +418,20 @@
 <p>4)堆</p>
 <ul>
 <li>堆内存中主要存放创建的对象以及数组。 堆内存是可以被多个线程所共享的一块区域,因此多个线程栈都可以去访问同一块堆的内存区域。堆里面的每一对象都存放了该实例的实例变量。  </li>
-<li>当在方法中定义了一个局部变量，如果这个变量是基本数据类型，那么这个变量的值就直接存放在栈中，如果这个变量是引用数据类型，那么这个对象变量就存放在堆内存中，而栈中存放的是一个指向堆内存中这个对象的首地址。<br>(<code>备注：</code>Java中除了8个基本数据类型以外的所有类型都是引用数据类型)</li>
-</ul>
-<ul>
-<li>引用<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BC%95%E7%94%A8.png" alt="引用"></li>
+<li><p>当在方法中定义了一个局部变量，如果这个变量是基本数据类型，那么这个变量的值就直接存放在栈中，如果这个变量是引用数据类型，那么这个对象变量就存放在堆内存中，而栈中存放的是一个指向堆内存中这个对象的首地址。<br>(<code>备注：</code>Java中除了8个基本数据类型以外的所有类型都是引用数据类型)</p>
+</li>
+<li><p>引用<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BC%95%E7%94%A8.png" alt="引用"></p>
+</li>
 <li>更改<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%AF%B9%E8%B1%A1%E6%9B%B4%E6%94%B9.png" alt="更改"></li>
 <li>数组<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E6%95%B0%E7%BB%84.png" alt="数组"></li>
 <li>循环<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BE%AA%E7%8E%AF.png" alt="循环"></li>
 </ul>
 <p><strong>实例变量和静态变量的区别：</strong>  </p>
 <ul>
-<li><code>实例变量：</code>实例变量是随着对象的创建而创建，而实例是存放在堆中，所以实例变量自然也就跟实例一并保存在堆内存。只要创建多少个实例，就会有多少份实例变量。当实例被回收的时候，实例变量也随之而销毁。  </li>
-<li><code>静态变量：</code>静态变量也叫类变量，它是在类加载的时候就已经初始化好，并存放在方法区，并且只有一份，所以它是被多个实例所共享的一个变量。   </li>
+<li><p><code>实例变量：</code>实例变量是随着对象的创建而创建，而实例是存放在堆中，所以实例变量自然也就跟实例一并保存在堆内存。只要创建多少个实例，就会有多少份实例变量。当实例被回收的时候，实例变量也随之而销毁。</p>
+</li>
+<li><p><code>静态变量：</code>静态变量也叫类变量，它是在类加载的时候就已经初始化好，并存放在方法区，并且只有一份，所以它是被多个实例所共享的一个变量。   </p>
+</li>
 </ul>
 <p>5)方法区  </p>
 <ul>
@@ -535,7 +537,7 @@
         <p><span>本文标题:</span><a href="/blog/2017/07/07/Core-Java/">深入Java核心</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Dr.Lester</a></p>
         <p><span>发布时间:</span>2017-07-07, 23:50:39</p>
-        <p><span>最后更新:</span>2017-07-08, 14:13:21</p>
+        <p><span>最后更新:</span>2017-07-08, 14:18:00</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/blog/2017/07/07/Core-Java/" title="深入Java核心">http://GitHubSupervise.io/blog/2017/07/07/Core-Java/</a>
             <span class="copy-path" data-clipboard-text="原文: http://GitHubSupervise.io/blog/2017/07/07/Core-Java/　　作者: Dr.Lester" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
