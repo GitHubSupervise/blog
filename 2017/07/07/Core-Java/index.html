@@ -14,10 +14,10 @@
 
 
 <meta name="description" content="本文分享一些自己对Java类加载、内存分配、Class对象以及反射的理解">
-<meta name="keywords" content="Java,类加载、内存分配、Class对象、反射">
+<meta name="keywords" content="Java,类加载,内存分配,Class对象,反射">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入Java核心">
-<meta property="og:url" content="http://GitHubSupervise.io/blog/2017/07/06/Core-Java/index.html">
+<meta property="og:url" content="http://GitHubSupervise.io/blog/2017/07/07/Core-Java/index.html">
 <meta property="og:site_name" content="Godql Code">
 <meta property="og:description" content="本文分享一些自己对Java类加载、内存分配、Class对象以及反射的理解">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E6%9C%BA%E5%88%B6.png">
@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/%E5%B8%B8%E9%87%8F%E6%B1%A0.jpg">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/%E5%86%85%E5%AD%98%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA.png">
 <meta property="og:image" content="http://oo31b5ljj.bkt.clouddn.com/String%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-07-08T04:17:09.761Z">
+<meta property="og:updated_time" content="2017-07-08T04:41:21.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入Java核心">
 <meta name="twitter:description" content="本文分享一些自己对Java类加载、内存分配、Class对象以及反射的理解">
@@ -194,17 +194,6 @@
                             
 
                                 <li>
-                                        <!--<a href="/blog//blog/index/">
-                                            主页
-                                        </a>-->
-                                        <!-- 改动的 -->
-                                        <a href="/blog/index/">
-                                            主页
-                                        </a>
-                                </li>
-                            
-
-                                <li>
                                         <!--<a href="/blog//blog/archives/">
                                             归档
                                         </a>-->
@@ -278,7 +267,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/AOP/">AOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Chrome/">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hibernate/">Hibernate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/IOC/">IOC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Intellij-IDEA/">Intellij IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mybatis/">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SpringMVC/">SpringMVC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Struts/">Struts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/交互/">交互</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/内网/">内网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/外网/">外网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/客户端/">客户端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/工作法/">工作法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/思维导图/">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/数值/">数值</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/服务器/">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/电商/">电商</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/秒杀系统/">秒杀系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/类加载、内存分配、Class对象、反射/">类加载、内存分配、Class对象、反射</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/精度/">精度</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/读书/">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/调试/">调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/资源/">资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/远程桌面/">远程桌面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/高并发/">高并发</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/AOP/">AOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Chrome/">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Class对象/">Class对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hibernate/">Hibernate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/IOC/">IOC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Intellij-IDEA/">Intellij IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mybatis/">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SpringMVC/">SpringMVC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Struts/">Struts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/交互/">交互</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/内存分配/">内存分配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/内网/">内网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/反射/">反射</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/外网/">外网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/客户端/">客户端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/工作法/">工作法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/思维导图/">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/数值/">数值</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/服务器/">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/电商/">电商</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/秒杀系统/">秒杀系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/类加载/">类加载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/精度/">精度</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/读书/">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/调试/">调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/资源/">资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/远程桌面/">远程桌面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/高并发/">高并发</a></li></ul>
                     </div>
                 </section>
                 
@@ -317,8 +306,6 @@
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/blog/index/">主页</a></li>
-                
                     <li><a href="/blog/archives/">归档</a></li>
                 
                     <li><a href="/blog/donate/">捐赠</a></li>
@@ -352,8 +339,8 @@
       <div class="body-wrap"><article id="post-Core-Java" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/blog/2017/07/06/Core-Java/" class="article-date">
-      <time datetime="2017-07-06T02:40:39.000Z" itemprop="datePublished">2017-07-06</time>
+      <a href="/blog/2017/07/07/Core-Java/" class="article-date">
+      <time datetime="2017-07-07T15:50:39.000Z" itemprop="datePublished">2017-07-07</time>
 </a>
     </div>
   
@@ -373,7 +360,7 @@
     <a class="article-category-link" href="/blog/categories/Java/">Java</a>
     </div>
         <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/类加载、内存分配、Class对象、反射/">类加载、内存分配、Class对象、反射</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Class对象/">Class对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/内存分配/">内存分配</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/反射/">反射</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/类加载/">类加载</a></li></ul>
     </div>
         <div class="clearfix"></div>
       </div>
@@ -454,7 +441,7 @@
 <ol>
 <li><p>字面常量  </p>
 <ul>
-<li>字面常量通常就是在Java中定义的字面量值，如：int i =1,这个1就是字面量；String s = “abc”，这个abc就是字面量。或者使用final修饰的常量值等等。</li>
+<li>字面常量通常就是在Java中定义的字面量值，如：int i =1,这个1就是字面量；String s = (“abc”)，这个abc就是字面量。或者使用final修饰的常量值等等。</li>
 </ul>
 </li>
 <li><p>符号引用</p>
@@ -476,8 +463,12 @@
 </blockquote>
 <ul>
 <li>解析一个类的各个部分，形成一个对象。<br><img src="http://oo31b5ljj.bkt.clouddn.com/String%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="String类加载示意图"></li>
-<li><p>外存中的类，加载到内存中，会形成该对象的Class类，例如：String类，加载到内存中，就是StringClass对象。<br>也就是说类是java.lang.Class类的实例对象，而Class是所有类的类<br>对于普通的对象，一般都的创建方式：  </p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">     String s = <span class="keyword">new</span> String();</div><div class="line">    ```  </div><div class="line">- 既然类都是Class的对象，那么能否像普通对象一样创建呢，当看源码时，是这样写的 ：  </div><div class="line">    ```<span class="function">java</span></div><div class="line">     <span class="keyword">private</span> <span class="title">Class</span><span class="params">(ClassLoader loader)</span> &#123;</div><div class="line">         classLoader = loader;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
+<li>外存中的类，加载到内存中，会形成该对象的Class类，例如：String类，加载到内存中，就是StringClass对象。<br>也就是说类是java.lang.Class类的实例对象，而Class是所有类的类<br>对于普通的对象，一般都的创建方式：    <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String s = <span class="keyword">new</span> String();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>既然类都是Class的对象，那么能否像普通对象一样创建呢，当看源码时，是这样写的 ：  </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="title">Class</span><span class="params">(ClassLoader loader)</span> </span>&#123;</div><div class="line">    classLoader = loader;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>源码里构造器是私有的，只有JVM可以创建Class的对象，虽然我们不能new一个Class对象，但是可以从已有的类得到一个Class对象，共有三种方式，如下：  </p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 类名.class  通过获取类的静态成员变量class得到(任何类都有一个隐含的静态成员变量class)</span></div><div class="line">Class&lt;?&gt; clazz = String.class;</div><div class="line"><span class="comment">// 对象.getClass</span></div><div class="line">Class&lt;?&gt; clazz2 = <span class="keyword">new</span> String().getClass();</div><div class="line"><span class="comment">// Class.forName("全量限定名")</span></div><div class="line">Class&lt;?&gt; clazz3 = Class.forName(<span class="string">"java.lang.String"</span>);</div></pre></td></tr></table></figure>
@@ -492,14 +483,18 @@
 <h3 id="反射机制的利与弊"><a href="#反射机制的利与弊" class="headerlink" title="反射机制的利与弊"></a>反射机制的利与弊</h3><p>为何要用反射机制？直接new对象不ok了吗，这就涉及到了动态与静态的概念</p>
 <ul>
 <li>静态编译：在编译时确定类型，绑定对象,即通过。</li>
-<li><p>动态编译：运行时确定类型，绑定对象。动态编译最大限度发挥了java的灵活性，体现了多态的应用，有利于降低类之间的藕合。  </p>
-</li>
-<li><p>优点：</p>
+<li>动态编译：运行时确定类型，绑定对象。动态编译最大限度发挥了java的灵活性，体现了多态的应用，有利于降低类之间的藕合。  </li>
+</ul>
+<p><strong>优点：</strong></p>
 <ul>
 <li>可以实现动态创建对象和编译。比如，一个软件，不可能第一个版本就把它设计的很完美，当这个程序编译成功，发布后，当发现某些功能需要更新时，我们不可能要用户把旧版的卸载，再重新安装新的版本。采用静态的话，需要把整个程序重新编译一次才可以实现功能的更新，而采用反射机制的话，它就可以不用卸载，只需要在运行时才动态的创建和编译，就可以实现该功能。<br>一句话总结：<code>运行期类型的判断，动态类加载，动态代理就使用了反射</code></li>
 </ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li><p>1.对性能有影响。反射相当于一系列解释操作，通知JVM要做的事情。性能比直接的java代码执行相同的操作要慢很多。</p>
 </li>
-<li>缺点：<br> 1.对性能有影响。反射相当于一系列解释操作，通知JVM要做的事情。性能比直接的java代码执行相同的操作要慢很多。<br> 2.由于反射允许代码执行一些在正常情况下不被允许的操作（比如访问私有的属性和方法），所以使用反射可能会导致意料之外的副作用，反射代码破坏了抽象性，因此当平台发生改变的时候，代码的行为就有可能也随着变化。</li>
+<li><p>2.由于反射允许代码执行一些在正常情况下不被允许的操作（比如访问私有的属性和方法），所以使用反射可能会导致意料之外的副作用，反射代码破坏了抽象性，因此当平台发生改变的时候，代码的行为就有可能也随着变化。</p>
+</li>
 </ul>
 <h3 id="反射机制的相关操作"><a href="#反射机制的相关操作" class="headerlink" title="反射机制的相关操作"></a>反射机制的相关操作</h3><h4 id="创建实例"><a href="#创建实例" class="headerlink" title="创建实例"></a>创建实例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在反射操作之前的第一步，就是要先获取Class对象</span></div><div class="line">Class&lt;?&gt; clazz = Class.forName(<span class="string">"org.demo.bean.People"</span>);</div><div class="line"><span class="comment">// 根据Class对象创建一个实例</span></div><div class="line">clazz.newInstance();</div></pre></td></tr></table></figure>
 <h4 id="动态操作属性"><a href="#动态操作属性" class="headerlink" title="动态操作属性"></a>动态操作属性</h4><ul>
@@ -526,7 +521,7 @@
 </li>
 </ul>
 <h3 id="通过反射了解集合泛型的本质"><a href="#通过反射了解集合泛型的本质" class="headerlink" title="通过反射了解集合泛型的本质"></a>通过反射了解集合泛型的本质</h3><ul>
-<li>Java中集合的泛型，是防止错误输入的，只在编译阶段有效，绕过编译到了运行期就无效了。<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    </div><div class="line">    List list = <span class="keyword">new</span> ArrayList(); </div><div class="line">    List&lt;String&gt; list1 = <span class="keyword">new</span> ArrayList&lt;&gt;(); </div><div class="line">  </div><div class="line">    list.add(<span class="string">"godql"</span>);</div><div class="line">    <span class="comment">// list1.add(20); 错误的</span></div><div class="line">    </div><div class="line">    Class c1 = list.getClass();</div><div class="line">    Class c2 = list1.getClass();</div><div class="line">  </div><div class="line">    System.out.println(c1 == c2); <span class="comment">// 结果：true，说明类类型完全相同</span></div><div class="line">    <span class="comment">// 反射的操作都是编译之后的操作(运行时)</span></div><div class="line">  </div><div class="line">    <span class="comment">/*</span></div><div class="line">     * 以上说明编译之后集合的泛型是泛型擦除的</div><div class="line">     * Java中集合的泛型，是防止错误输入的，只在编译阶段有效，绕过编译就无效了。</div><div class="line">     * 验证: 通过方法的反射来操作，绕过编译 </div><div class="line">     */</div><div class="line">     <span class="keyword">try</span> &#123;</div><div class="line">         <span class="comment">// 通过动态操作方法的反射得到add方法</span></div><div class="line">         Method m = c2.getMethod(<span class="string">"add"</span>, Object.class);</div><div class="line">         <span class="comment">// 方法回调 给list1添加一个int型的，这是在运行时的操作，所以编译器编译时没有泛型检查，所以不会报错</span></div><div class="line">         <span class="comment">// 绕过编译操作</span></div><div class="line">         m.invoke(list1, <span class="number">20</span>);</div><div class="line">         <span class="comment">// 验证是否有添加进list集合里</span></div><div class="line">         System.out.println(list1.size()); </div><div class="line">         <span class="comment">// 这时候不能使用foreach遍历，否则集合会认为集合里边全是String类型的值</span></div><div class="line">         <span class="comment">// 且有类型转换错误，因为这个集合里面有int类型、String类</span></div><div class="line">         System.out.println(list1); </div><div class="line">     &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">     &#125;</div><div class="line">    </div><div class="line">   </div><div class="line"> </div><div class="line">    <span class="comment">// 验证：我们可以通过方法的反射来给list2添加元素，这样可以绕过编译检查</span></div><div class="line">    </div><div class="line">        <span class="comment">// 通过方法反射得到add方法</span></div><div class="line">         <span class="comment">// 给list2添加一个int型的，上面显示在编译器是会报错的</span></div><div class="line">         <span class="comment">// 结果：2，说明list2长度增加了，并没有泛型检查</span></div><div class="line">    </div><div class="line"> </div><div class="line">    <span class="comment">/*</span></div><div class="line">     * 综上可以看出，在编译器的时候，泛型会限制集合内元素类型保持一致，但是编译器结束进入</div><div class="line">     * 运行期以后，泛型就不再起作用了，即使是不同类型的元素也可以插入集合。</div><div class="line">     */</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>Java中集合的泛型，是防止错误输入的，只在编译阶段有效，绕过编译到了运行期就无效了。<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    </div><div class="line">    List list = <span class="keyword">new</span> ArrayList(); </div><div class="line">    List&lt;String&gt; list1 = <span class="keyword">new</span> ArrayList&lt;&gt;(); </div><div class="line">  </div><div class="line">    list.add(<span class="string">"godql"</span>);</div><div class="line">    <span class="comment">// list1.add(20); 错误的</span></div><div class="line">    </div><div class="line">    Class c1 = list.getClass();</div><div class="line">    Class c2 = list1.getClass();</div><div class="line">  </div><div class="line">    System.out.println(c1 == c2); <span class="comment">// 结果：true，说明类类型完全相同</span></div><div class="line">    <span class="comment">// 反射的操作都是编译之后的操作(运行时)</span></div><div class="line">  </div><div class="line">    <span class="comment">/*</span></div><div class="line">     * 以上说明编译之后集合的泛型是泛型擦除的</div><div class="line">     * Java中集合的泛型，是防止错误输入的，只在编译阶段有效，绕过编译就无效了。</div><div class="line">     * 验证: 通过方法的反射来操作，绕过编译 </div><div class="line">     */</div><div class="line">     <span class="keyword">try</span> &#123;</div><div class="line">         <span class="comment">// 通过动态操作方法的反射得到add方法</span></div><div class="line">         Method m = c2.getMethod(<span class="string">"add"</span>, Object.class);</div><div class="line">         <span class="comment">// 方法回调 给list1添加一个int型的，这是在运行时的操作，所以编译器编译时没有泛型检查，所以不会报错</span></div><div class="line">         <span class="comment">// 绕过编译操作</span></div><div class="line">         m.invoke(list1, <span class="number">20</span>);</div><div class="line">         <span class="comment">// 验证是否有添加进list集合里</span></div><div class="line">         System.out.println(list1.size()); </div><div class="line">         <span class="comment">// 这时候不能使用foreach遍历，否则集合会认为集合里边全是String类型的值</span></div><div class="line">         <span class="comment">// 且有类型转换错误，因为这个集合里面有int类型、String类</span></div><div class="line">         System.out.println(list1); </div><div class="line">     &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">     &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
@@ -535,20 +530,20 @@
 </ul>
 <p><del>I was within and without.</del></p>
 <p><iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>  </p>
-<center><font color="grey"><strong>请点击↑二维码打赏</strong></font></center>
+<center><font color="grey">请点击↑二维码打赏</font></center>
       
     </div>
     
   </div>
   
     <div class="copyright">
-        <p><span>Title:</span><a href="/blog/2017/07/06/Core-Java/">深入Java核心</a></p>
+        <p><span>Title:</span><a href="/blog/2017/07/07/Core-Java/">深入Java核心</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Dr.Lester</a></p>
-        <p><span>Created:</span>2017-07-06, 10:40:39</p>
-        <p><span>Updated:</span>2017-07-08, 12:17:09</p>
+        <p><span>Created:</span>2017-07-07, 23:50:39</p>
+        <p><span>Updated:</span>2017-07-08, 12:41:21</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/blog/2017/07/06/Core-Java/" title="深入Java核心">http://GitHubSupervise.io/blog/2017/07/06/Core-Java/</a>
-            <span class="copy-path" data-clipboard-text="From http://GitHubSupervise.io/blog/2017/07/06/Core-Java/　　By Dr.Lester" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/blog/2017/07/07/Core-Java/" title="深入Java核心">http://GitHubSupervise.io/blog/2017/07/07/Core-Java/</a>
+            <span class="copy-path" data-clipboard-text="From http://GitHubSupervise.io/blog/2017/07/07/Core-Java/　　By Dr.Lester" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -647,7 +642,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/06/Core-Java/">深入Java核心</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/03/Connect the inner and outer net/">外网远程桌面连接内网服务器教程(超详细)</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/05/17/Precision/">Java数值避免浮点型计算丢失精度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/07/Core-Java/">深入Java核心</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/03/Connect the inner and outer net/">外网远程桌面连接内网服务器教程(超详细)</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/05/17/Precision/">Java数值避免浮点型计算丢失精度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li></ul>
 
 
     <script>
@@ -720,8 +715,22 @@ MathJax.Hub.Queue(function() {
 <script>
     // Open in New Window
     
-        $("a").attr("target", "_blank");
-        $("#scroll a, #toc a").removeAttr("target");
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
     
 </script>
 <script>
