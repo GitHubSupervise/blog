@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
+    <loc>http://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
     
-    <lastmod>2017-07-08T07:20:57.561Z</lastmod>
+    <lastmod>2017-07-08T07:39:28.840Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://GitHubSupervise.io/blog/2017/07/07/Core-Java/</loc>
     
-    <lastmod>2017-07-08T07:20:57.551Z</lastmod>
+    <lastmod>2017-07-08T07:35:09.071Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
+    
+    <lastmod>2017-07-08T07:20:57.561Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>http://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
     
     <lastmod>2017-06-02T17:54:39.707Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
-    
-    <lastmod>2017-06-02T16:50:35.699Z</lastmod>
     
   </url>
   

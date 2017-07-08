@@ -3,10 +3,35 @@
 
 
     
+  <url>
+    <loc>http://GitHubSupervise.io/blog/blog/2017/02/04/Chrome/</loc>
+    <lastmod>2017-07-08T07:39:28.840Z</lastmod>
+    <data>
+        <display>
+        <title>非常完整的Chrome浏览器客户端调试大全</title>
+        <pubTime>2017-02-04T13:42:27.000Z</pubTime>
+        
+        <tag>Chrome</tag>
+         
+        <tag>客户端</tag>
+         
+        <tag>调试</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Chrome" url="http://GitHubSupervise.io/blog/blog/categories/Chrome/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://GitHubSupervise.io/blog/blog/2017/07/07/Core-Java/</loc>
-    <lastmod>2017-07-08T07:20:57.551Z</lastmod>
+    <lastmod>2017-07-08T07:35:09.071Z</lastmod>
     <data>
         <display>
         <title>深入Java核心</title>
@@ -31,6 +56,7 @@
     </data>
     </url>
 
+    
     
     
     
@@ -166,32 +192,6 @@
            
              
               <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://GitHubSupervise.io/blog/blog/2017/02/04/Chrome/</loc>
-    <lastmod>2017-06-02T16:50:35.699Z</lastmod>
-    <data>
-        <display>
-        <title>非常完整的Chrome浏览器客户端调试大全</title>
-        <pubTime>2017-02-04T13:42:27.000Z</pubTime>
-        
-        <tag>Chrome</tag>
-         
-        <tag>客户端</tag>
-         
-        <tag>调试</tag>
-         
-        <tag>前端</tag>
-         
-         
-           
-             
-              <breadCrumb title="Chrome" url="http://GitHubSupervise.io/blog/blog/categories/Chrome/"/>
           
         </display>
     </data>
