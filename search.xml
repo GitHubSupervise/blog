@@ -56,6 +56,8 @@
 <ul>
 <li>堆内存中主要存放创建的对象以及数组。 堆内存是可以被多个线程所共享的一块区域,因此多个线程栈都可以去访问同一块堆的内存区域。堆里面的每一对象都存放了该实例的实例变量。</li>
 <li>当在方法中定义了一个局部变量，如果这个变量是基本数据类型，那么这个变量的值就直接存放在栈中，如果这个变量是引用数据类型，那么这个对象变量就存放在堆内存中，而栈中存放的是一个指向堆内存中这个对象的首地址。<br>(<code>备注：</code>Java中除了8个基本数据类型以外的所有类型都是引用数据类型)  </li>
+</ul>
+<ul>
 <li>引用<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%BC%95%E7%94%A8.png" alt="引用">  </li>
 <li>更改<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E5%AF%B9%E8%B1%A1%E6%9B%B4%E6%94%B9.png" alt="更改">  </li>
 <li>数组<br><img src="http://oo31b5ljj.bkt.clouddn.com/%E5%A0%86%EF%BC%9A%E6%95%B0%E7%BB%84.png" alt="数组">  </li>
@@ -127,12 +129,7 @@
 <li>可以实现动态创建对象和编译。比如，一个软件，不可能第一个版本就把它设计的很完美，当这个程序编译成功，发布后，当发现某些功能需要更新时，我们不可能要用户把旧版的卸载，再重新安装新的版本。采用静态的话，需要把整个程序重新编译一次才可以实现功能的更新，而采用反射机制的话，它就可以不用卸载，只需要在运行时才动态的创建和编译，就可以实现该功能。<br>一句话总结：<code>运行期类型的判断，动态类加载，动态代理就使用了反射</code></li>
 </ul>
 <p><strong>缺点：</strong></p>
-<ul>
-<li><p>1.对性能有影响。反射相当于一系列解释操作，通知JVM要做的事情。性能比直接的java代码执行相同的操作要慢很多。</p>
-</li>
-<li><p>2.由于反射允许代码执行一些在正常情况下不被允许的操作（比如访问私有的属性和方法），所以使用反射可能会导致意料之外的副作用，反射代码破坏了抽象性，因此当平台发生改变的时候，代码的行为就有可能也随着变化。</p>
-</li>
-</ul>
+<p>　　1.对性能有影响。反射相当于一系列解释操作，通知JVM要做的事情。性能比直接的java代码执行相同的操作要慢很多。<br>　　2.由于反射允许代码执行一些在正常情况下不被允许的操作（比如访问私有的属性和方法），所以使用反射可能会导致意料之外的副作用，反射代码破坏了抽象性，因此当平台发生改变的时候，代码的行为就有可能也随着变化。</p>
 <h3 id="反射机制的相关操作"><a href="#反射机制的相关操作" class="headerlink" title="反射机制的相关操作"></a>反射机制的相关操作</h3><h4 id="创建实例"><a href="#创建实例" class="headerlink" title="创建实例"></a>创建实例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在反射操作之前的第一步，就是要先获取Class对象</span></div><div class="line">Class&lt;?&gt; clazz = Class.forName(<span class="string">"org.demo.bean.People"</span>);</div><div class="line"><span class="comment">// 根据Class对象创建一个实例</span></div><div class="line">clazz.newInstance();</div></pre></td></tr></table></figure>
 <h4 id="动态操作属性"><a href="#动态操作属性" class="headerlink" title="动态操作属性"></a>动态操作属性</h4><ul>
 <li><p>通过Class对象可以动态的获取和操作类中的属性，属性在JDK中有一个类来进行封装，就是Field,Field提供了一些常用的API方法让我们去访问和操作类中的属性</p>
@@ -163,7 +160,7 @@
 </ul>
 <h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
 <li>通用的应用程序</li>
-<li>框架比如：<br>  1.Spring 的 Ioc/Di<br>  2.SpringMVC 监控 Controller中的注解<br>  3.MyBatis 利用反射获取和设置对象值<br>  4.Struts2 的 FormBean 和页面之间…<br>  5.Hibernate的 find(Class clazz)<br>  6.JavaBean和JSP之间调用<br>  7.JDBC 的 classForName()  </li>
+<li>框架比如：<br>　　1.Spring 的 Ioc/Di<br>　　2.SpringMVC 监控 Controller中的注解<br>　　3.MyBatis 利用反射获取和设置对象值<br>　　4.Struts2 的 FormBean 和页面之间…<br>　　5.Hibernate的 find(Class clazz)<br>　　6.JavaBean和JSP之间调用<br>　　7.JDBC 的 classForName()  </li>
 </ul>
 <p><del>I was within and without.</del></p>
 <p><iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>  </p>
