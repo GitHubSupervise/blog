@@ -3,6 +3,34 @@
 
 
     
+  <url>
+    <loc>http://GitHubSupervise.io/blog/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
+    <lastmod>2018-05-24T20:01:32.973Z</lastmod>
+    <data>
+        <display>
+        <title>Intellij IDEA 2017集成MyBatis三剑客</title>
+        <pubTime>2017-06-02T16:51:36.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>SpringMVC</tag>
+         
+        <tag>Mybatis</tag>
+         
+        <tag>Intellij IDEA</tag>
+         
+        <tag>插件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -131,34 +159,6 @@
         <tag>秒杀系统</tag>
          
         <tag>交互</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://GitHubSupervise.io/blog/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
-    <lastmod>2017-07-08T07:45:16.473Z</lastmod>
-    <data>
-        <display>
-        <title>Intellij IDEA 2017集成MyBatis三剑客</title>
-        <pubTime>2017-06-02T16:51:36.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>SpringMVC</tag>
-         
-        <tag>Mybatis</tag>
-         
-        <tag>Intellij IDEA</tag>
-         
-        <tag>插件</tag>
          
          
            
