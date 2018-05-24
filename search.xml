@@ -616,10 +616,6 @@
             
             <tag> Java </tag>
             
-            <tag> IOC </tag>
-            
-            <tag> AOP </tag>
-            
             <tag> 框架 </tag>
             
             <tag> Struts </tag>
@@ -627,6 +623,10 @@
             <tag> Spring </tag>
             
             <tag> Hibernate </tag>
+            
+            <tag> IOC </tag>
+            
+            <tag> AOP </tag>
             
         </tags>
         
