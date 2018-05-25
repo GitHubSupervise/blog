@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://GitHubSupervise.io/blog/about/index.html</loc>
+    
+    <lastmod>2018-05-24T22:24:39.082Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
     
     <lastmod>2018-05-24T20:46:29.386Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://GitHubSupervise.io/blog//404.html</loc>
     
     <lastmod>2017-12-23T16:16:36.076Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/about/index.html</loc>
-    
-    <lastmod>2017-07-13T17:53:29.275Z</lastmod>
     
   </url>
   
