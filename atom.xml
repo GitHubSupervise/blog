@@ -180,10 +180,6 @@
     
       <category term="Java" scheme="http://GitHubSupervise.io/blog/tags/Java/"/>
     
-      <category term="IOC" scheme="http://GitHubSupervise.io/blog/tags/IOC/"/>
-    
-      <category term="AOP" scheme="http://GitHubSupervise.io/blog/tags/AOP/"/>
-    
       <category term="框架" scheme="http://GitHubSupervise.io/blog/tags/%E6%A1%86%E6%9E%B6/"/>
     
       <category term="Struts" scheme="http://GitHubSupervise.io/blog/tags/Struts/"/>
@@ -191,6 +187,10 @@
       <category term="Spring" scheme="http://GitHubSupervise.io/blog/tags/Spring/"/>
     
       <category term="Hibernate" scheme="http://GitHubSupervise.io/blog/tags/Hibernate/"/>
+    
+      <category term="IOC" scheme="http://GitHubSupervise.io/blog/tags/IOC/"/>
+    
+      <category term="AOP" scheme="http://GitHubSupervise.io/blog/tags/AOP/"/>
     
   </entry>
   
@@ -318,9 +318,9 @@
       <category term="Java" scheme="http://GitHubSupervise.io/blog/categories/Java/"/>
     
     
-      <category term="资源" scheme="http://GitHubSupervise.io/blog/tags/%E8%B5%84%E6%BA%90/"/>
-    
       <category term="Java" scheme="http://GitHubSupervise.io/blog/tags/Java/"/>
+    
+      <category term="资源" scheme="http://GitHubSupervise.io/blog/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
