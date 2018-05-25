@@ -633,13 +633,26 @@
 
 
 
-<section id="comments" class="comments">
-    <style>
-        .comments{margin:30px;padding:10px;background:#fff}
-        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-    </style>
-    
-</section>
+   <div id="vcomment" class="comment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+<script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        verify: verify,
+        app_id: "oMPq2yvB2hlGuTIz8uJs6aAy-gzGzoHsz",
+        app_key: "UjYvIPBXXg99EpX68PS3Q8Yb",
+        placeholder: "ヾ(≧▽≦*)o来啊，快活啊！",
+        avatar: "identicon",
+        avatar_cdn: "https://s.gravatar.com/avatar/29c7f03a8ce167219c7a6377d9944107?s=80",
+        pageSize: "15"
+    });
+</script>
 
 
 
