@@ -59,6 +59,8 @@
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.min.js/1.5.10/clipboard.min.js"></script>
+<script src="//cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
+<script src="//unpkg.com/meting@1.0.1/dist/Meting.min.js"></script>
 <link href="" rel="stylesheet">
 
 <script>
@@ -377,7 +379,7 @@
     #container .article .article-title { padding: 0; }
 </style>
               
-
+              
             <h2 id="现实中的我"><a href="#现实中的我" class="headerlink" title="现实中的我"></a>现实中的我</h2><a id="more"></a>
 <ul>
 <li>英文名：Dr.Lester。</li>
@@ -397,31 +399,6 @@
 <li>我常用邮件：googllwebmaster@gmail.com</li>
 <li>QQ：1025142302</li>
 </ul>
-            <script src="//cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
-<div id="player"></div>
-<script>
-    if($(".left-col").css("display") !== "none") {
-        const ap = new APlayer({
-            element: document.getElementById('player'),
-            mutex: true,
-            theme: '#EBEEDF',
-            order: 'random',
-            lrcType: 3,
-            fixed: true,
-        });
-        var xhr = new XMLHttpRequest(), listid = 883067320;
-        xhr.open('get', 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=' + listid);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    ap.list.add(JSON.parse(xhr.responseText));
-                    ap.play();
-                }
-            }
-        }
-        xhr.send();
-    }
-</script>
       
     </div>
     
