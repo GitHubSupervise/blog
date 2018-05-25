@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
+    
+    <lastmod>2018-05-25T09:59:00.115Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://GitHubSupervise.io/blog/about/index.html</loc>
     
     <lastmod>2018-05-24T22:24:39.082Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://GitHubSupervise.io/blog/2017/07/07/Core-Java/</loc>
     
     <lastmod>2017-07-08T15:39:54.416Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
-    
-    <lastmod>2017-07-08T08:31:01.122Z</lastmod>
     
   </url>
   
