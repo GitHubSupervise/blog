@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://GitHubSupervise.io/blog/blog/2017/01/02/Awesome-java-cn/</loc>
+    <lastmod>2018-05-25T12:38:42.509Z</lastmod>
+    <data>
+        <display>
+        <title>Java资源大全中文版</title>
+        <pubTime>2017-01-01T21:40:27.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>资源</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://GitHubSupervise.io/blog/blog/2017/07/07/Core-Java/</loc>
-    <lastmod>2018-05-25T11:05:20.066Z</lastmod>
+    <lastmod>2018-05-25T12:37:37.494Z</lastmod>
     <data>
         <display>
         <title>深入Java核心</title>
@@ -103,28 +125,6 @@
            
              
               <breadCrumb title="Chrome" url="http://GitHubSupervise.io/blog/blog/categories/Chrome/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://GitHubSupervise.io/blog/blog/2017/01/02/Awesome-java-cn/</loc>
-    <lastmod>2018-05-25T10:46:30.720Z</lastmod>
-    <data>
-        <display>
-        <title>Java资源大全中文版</title>
-        <pubTime>2017-01-01T21:40:27.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>资源</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://GitHubSupervise.io/blog/blog/categories/Java/"/>
           
         </display>
     </data>
