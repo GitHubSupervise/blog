@@ -72,6 +72,7 @@
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.min.js/1.5.10/clipboard.min.js"></script>
+<link href="" rel="stylesheet">
 
 <script>
     var yiliaConfig = {
@@ -378,20 +379,7 @@
       <div class="article-entry" itemprop="articleBody">
           
               
-              
-                    <script src="//cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
-<script src=""></script>
 
-<div class="aplayer" data-id="729638" data-server="netease" data-type="song" data-autoplay="true"></div>
-<div style="height: 16px"></div>
-
-<script>
-    // 去除移动端的播放器, 减少流量消耗
-    if ($(".left-col").css("display") === "none") {
-        $(".aplayer").remove();
-    }
-</script>
-              
             <a id="more"></a>
 <h2 id="类加载"><a href="#类加载" class="headerlink" title="类加载"></a>类加载</h2><blockquote>
 <p>类加载负责加载编译后的class文件（字节码文件）到JVM当中。</p>
@@ -557,6 +545,31 @@
 <p><del>I was within and without.</del></p>
 <p><iframe src="http://www.godql.com/blog/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>  </p>
 <center><font color="grey">请点击↑二维码打赏</font></center>
+            <script src="//cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
+<div id="player"></div>
+<script>
+    if($(".left-col").css("display") !== "none") {
+        const ap = new APlayer({
+            element: document.getElementById('player'),
+            mutex: true,
+            theme: '#EBEEDF',
+            order: 'random',
+            lrcType: 3,
+            fixed: true,
+        });
+        var xhr = new XMLHttpRequest(), listid = 883067320;
+        xhr.open('get', 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=' + listid);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    ap.list.add(JSON.parse(xhr.responseText));
+                    ap.play();
+                }
+            }
+        }
+        xhr.send();
+    }
+</script>
       
     </div>
     
@@ -679,7 +692,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/07/Core-Java/">深入Java核心</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/03/Connect the inner and outer net/">外网远程桌面连接内网服务器教程(超详细)</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/05/17/Precision/">Java数值避免浮点型计算丢失精度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/07/Core-Java/">深入Java核心</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/07/03/Connect the inner and outer net/">外网远程桌面连接内网服务器教程(超详细)</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/">Intellij IDEA 2017集成MyBatis三剑客</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/05/17/Precision/">Java数值避免浮点型计算丢失精度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/16/javaHighConcurrencyOne/">Java高并发秒杀系统API</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/04/01/sshIntegration/">SSH2(Struts2,Spring4,Hibernate5)整合的意义及其精髓</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/17/IOC-AOP/">深入理解IOC与AOP</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/16/Execution_of_work/">《番茄工作法图解》思维导图读书笔记分享</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/04/Chrome/">非常完整的Chrome浏览器客户端调试大全</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/Awesome-java-cn/">Java资源大全中文版</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/02/professional-programmer/">各种优秀资料、神器及框架</a></li></ul>
 
 
     <script>
