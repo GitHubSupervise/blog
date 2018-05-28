@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
+    
+    <lastmod>2018-05-28T20:29:55.330Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
     
     <lastmod>2018-05-25T19:52:15.952Z</lastmod>
@@ -86,93 +93,9 @@
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
-    
-    <lastmod>2018-05-25T09:59:00.115Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://GitHubSupervise.io/blog/about/index.html</loc>
     
     <lastmod>2018-05-24T22:24:39.082Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f07.exp.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f06.exp.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/package-lock.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/package.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/izumi.model.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/izumi.physics.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f02.exp.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f01.exp.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f03.exp.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f05.exp.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f04.exp.json</loc>
-    
-    <lastmod>2018-02-13T20:21:52.000Z</lastmod>
     
   </url>
   
