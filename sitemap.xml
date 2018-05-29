@@ -2,6 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/package.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.762Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/izumi.physics.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.496Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/izumi.model.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.487Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f07.exp.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.482Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f06.exp.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.473Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f05.exp.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.466Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f04.exp.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.461Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f03.exp.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.456Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f02.exp.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f01.exp.json</loc>
+    
+    <lastmod>2018-05-29T02:12:31.443Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
     
     <lastmod>2018-05-28T20:29:55.330Z</lastmod>
