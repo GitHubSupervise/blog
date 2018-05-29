@@ -2,182 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/package.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/izumi.physics.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.496Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/izumi.model.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.487Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f07.exp.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.482Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f06.exp.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.473Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f05.exp.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.466Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f04.exp.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.461Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f03.exp.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.456Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f02.exp.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/live2d_models/live2d-widget-model-izumi/assets/exp/f01.exp.json</loc>
-    
-    <lastmod>2018-05-29T02:12:31.443Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://GitHubSupervise.io/blog/donate/index.html</loc>
+    <loc>https://GitHubSupervise.io/blog/donate/index.html</loc>
     
     <lastmod>2018-05-28T20:29:55.330Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/02/04/Chrome/</loc>
     
     <lastmod>2018-05-25T19:52:15.952Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/07/07/Core-Java/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/07/07/Core-Java/</loc>
     
     <lastmod>2018-05-25T19:25:25.793Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/04/01/sshIntegration/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/04/01/sshIntegration/</loc>
     
     <lastmod>2018-05-25T16:34:46.003Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/03/17/IOC-AOP/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/03/17/IOC-AOP/</loc>
     
     <lastmod>2018-05-25T16:34:45.975Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/07/03/Connect%20the%20inner%20and%20outer%20net/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/07/03/Connect%20the%20inner%20and%20outer%20net/</loc>
     
     <lastmod>2018-05-25T16:34:45.879Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/02/16/Execution_of_work/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/02/16/Execution_of_work/</loc>
     
     <lastmod>2018-05-25T16:34:45.851Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/04/16/javaHighConcurrencyOne/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/04/16/javaHighConcurrencyOne/</loc>
     
     <lastmod>2018-05-25T16:34:45.824Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/01/02/professional-programmer/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/01/02/professional-programmer/</loc>
     
     <lastmod>2018-05-25T16:34:45.793Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/05/17/Precision/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/05/17/Precision/</loc>
     
     <lastmod>2018-05-25T16:34:45.743Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/06/03/Intellij_IDEA_Integration_MyBatis/</loc>
     
     <lastmod>2018-05-25T16:34:45.718Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/2017/01/02/Awesome-java-cn/</loc>
+    <loc>https://GitHubSupervise.io/blog/2017/01/02/Awesome-java-cn/</loc>
     
     <lastmod>2018-05-25T16:32:20.467Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog//404.html</loc>
+    <loc>https://GitHubSupervise.io/blog//404.html</loc>
     
     <lastmod>2018-05-25T14:35:50.581Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/about/index.html</loc>
+    <loc>https://GitHubSupervise.io/blog/about/index.html</loc>
     
     <lastmod>2018-05-24T22:24:39.082Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/demo/index.html</loc>
+    <loc>https://GitHubSupervise.io/blog/demo/index.html</loc>
     
     <lastmod>2017-07-08T04:17:09.744Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://GitHubSupervise.io/blog/tags/index.html</loc>
+    <loc>https://GitHubSupervise.io/blog/tags/index.html</loc>
     
     <lastmod>2017-04-04T12:16:43.121Z</lastmod>
     
